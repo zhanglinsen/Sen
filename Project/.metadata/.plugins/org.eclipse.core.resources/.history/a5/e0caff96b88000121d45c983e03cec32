@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:WindowedApplication xmlns:fx="http://ns.adobe.com/mxml/2009" 
+					   xmlns:s="library://ns.adobe.com/flex/spark" 
+					   xmlns:mx="library://ns.adobe.com/flex/mx"
+					   fontSize="12"
+					   width="1180"
+					   height="820"
+					   preinitialize="init()">
+	<fx:Declarations>
+		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
+	</fx:Declarations>
+	<fx:Script>
+		<![CDATA[
+			import mx.collections.XMLListCollection;
+			import mx.controls.Alert;
+			import mx.controls.menuClasses.MenuBarItem;
+			import mx.events.MenuEvent;
+			
+			import project.core.global.GlobalVariables;
+			import project.core.loader.ClassLoader;
+			import project.editors.editor.IEditor;
+			import project.editors.editor.text.TextEditor;
+			import project.editors.global.Configs;
+			import project.editors.global.EditorTypeConst;
+			import project.editors.global.GlobalConst;
+			import project.editors.global.StaticFileConst;
+			import project.editors.global.TextFormatConst;
+			import project.editors.loader.AirClassLoader;
+			import project.editors.manager.TextManager;
+			import project.editors.manager.XmlManager;
+			import project.editors.utils.FileUtils;
+
+			/** 打开的当前用户目录类型   File.desktopDirectory 是指桌面 */
+			private var _CurrFile:File = File.desktopDirectory;
+			/** 当前打开的地图类型 */
+			private var _CurrEditorType:String;
+			/** 所有的文件类型 	文件格式  	文件类型列表*/
+			private var allFileFilter:FileFilter = new FileFilter( "所有文件(*.*)", "*.*" );
+			/** XML文件类型 	XML格式  	XML类型列表*/
+			private var xmlFileFilter:FileFilter = new FileFilter( "XML文件(*.xml)", "*.xml" );
+			/** Images文件类型 	 图片格式  	*.jpg; *.gif; *.png 类型列表*/
+			private var imagesFileFilter:FileFilter = new FileFilter("Images", "*.jpg;*.gif;*.png");
+			
+			/** 模块实现接口*/
+			private var editor:IEditor;
+			/** 编辑器数据缓存  */
+			private var editorCache:Dictionary = new Dictionary();
+			
+			
+			/** 编辑器主菜单数据  */
+			[Bindable]
+			public var _MenuCollection:XMLListCollection;
+			
+			/** 导出 */
+			private const MENU_EXPORT:String = "export";
+			/** 导入 */
+			private const MENU_IMPORT:String = "import";
+			//            private const MENU_OPEN_TEXT:String = "openText";
+			/** 重新加载  */
+			private const MENU_RELOAD:String = "reload";
+			/** 保存  */
+			private const MENU_SAVE:String = "save";
+			/** 更改资源目录  */
+			private const MENU_INITRES:String = "initres";
+			/** 切换语言版本  */
+			private const MENU_SWITCH_LANG:String = "switchLang";
+			
+			/** 编辑器 所用资源路径 */
+			private var _ResPath:String;
+			/** 编辑器 语言版本*/
+			private var _Lang:String;
+			
+			/** 编辑器初始化*.jpg;*.gif;*.png  */
+			private function init():void
+			{
+				ClassLoader.Instance.Domain = ApplicationDomain.currentDomain;  //指定类加载器程序的作用域 为：获取正在其中执行代码的当前应用程序域。
+				InitMenu(); 
+				var file:File = new File( File.applicationDirectory.nativePath+"/cfg.xml" ); //资源文件夹路径
+				if ( !file.exists )  // 资源文件夹路径    引用的文件或目录不存在
+				{
+					ChooseResource( file ); //弹出窗口选择目录
+				}
+				else
+				{
+					InitResource( file );
+				}
+			}
+			
+			/** 初始化编辑器导航  */
+			private function InitMenu():void
+			{
+				var menubarXML:XMLList = FileUtils.GetXml(File.applicationDirectory.nativePath+"/Menu.xml").menuitem; //导航菜单
+				
+				var list:XMLList = FileUtils.GetXml(File.applicationDirectory.nativePath+"/TextFile.xml").File;	//加载动态文本  数据列表
+				var node:XML = menubarXML.menuitem.(@data=='TextEdit')[0]; //动态文本 菜单
+				for( var i:int=0; i<list.length(); i++ ) { //将动态文本菜单  添加到 主菜单
+					var sub:XML = <menuitem />;
+					sub.@data = EditorTypeConst.TEXTEDIT;
+					sub.@label = list[i].@name.toString();
+					sub.@file = list[i].text().toString();
+					node.appendChild( sub );
+				}
+				_MenuCollection = new XMLListCollection( menubarXML );
+			}
+			
+			private function MenuItem_OnClick( evt:MenuEvent ):void
+			{
+				
+				var type:String = evt.item.@data;
+				
+				switch ( type )
+				{
+					case MENU_SWITCH_LANG:
+						//语言切换
+						var lang:String = evt.item.@lang;
+						if( lang ) {
+							this.SwitchLang(lang);
+						}
+						return ;
+					case MENU_INITRES:
+						ChooseResource(new File( File.applicationDirectory.nativePath+"/cfg.xml" ));
+						break;
+					case MENU_RELOAD: //重新加载
+						if ( editor )
+						{
+							editor.Reload();
+						}
+						break;
+					case MENU_SAVE: //保存
+						if ( editor )
+						{
+							editor.Save();
+						}
+						break;
+					case MENU_EXPORT: //导出
+						if ( editor )
+						{
+							_CurrFile.browseForSave( "导出" );
+							_CurrFile.addEventListener( Event.SELECT, MapExport_OnSelect );
+						}
+						break;
+					case MENU_IMPORT: //导入
+						if ( editor )
+						{
+							_CurrFile.browseForOpen( "导入", [ xmlFileFilter,allFileFilter ]);
+							_CurrFile.addEventListener( Event.SELECT, MapImport_OnSelect );
+						}
+						break;
+					case EditorTypeConst.TEXTEDIT:
+						ShowEditor( type );
+						(editor as TextEditor).FileName = Configs.TextPath+ evt.item.@file;
+						editor.Import( new File( Configs.TextPath+ evt.item.@file ));
+						break;
+					default:
+						XML.ignoreWhitespace = true;
+						XML.prettyPrinting = true;
+						ShowEditor( type, evt.item );
+						break;
+				}
+			}
+			/**弹出选择 Resource 目录**/
+			private function ChooseResource( file:File ):void
+			{
+				file.addEventListener( Event.SELECT, File_OnSelect );
+				file.browseForDirectory( "选择 Resource 目录" );
+			}
+			/**选择 Resource 目录**/
+			private function File_OnSelect( e:Event ):void
+			{
+				(e.currentTarget as File).removeEventListener( Event.SELECT, File_OnSelect ); //清除选择资源目录事件
+				var file:File = new File( File.applicationDirectory.nativePath+"/cfg.xml" );  //获得本地保存的资源目录路径
+				var cfg:XML;
+				
+				if ( file.exists )//本地资源目录存在			将资源目录路径卸载本地 文件
+				{
+					var fs:FileStream = new FileStream();
+					fs.open( file, FileMode.READ );
+					cfg = new XML( fs.readUTFBytes( fs.bytesAvailable ));
+					fs.close();
+				}
+				else
+				{
+					cfg = <cfg />;
+				}
+				cfg.ResourcePath = (e.currentTarget as File).nativePath;  // 采用主机操作系统表示用户选择的资源目录的完整路径   写入XML
+				
+				if ( FileUtils.SaveXml( file, cfg))
+				{
+					_Lang = "";
+					InitResource( file );
+				}
+				else
+				{
+					Alert.show( "配置保存出错!", "", 4, null, function():void
+					{
+						this.exit();
+					});
+				}
+			}
+			/**初始化编辑器资源（图片和文本）**/
+			private function InitResource( file:File ):void
+			{
+				//读取程序配置
+				var fs:FileStream = new FileStream();
+				fs.open( file, FileMode.READ );
+				var cfg:XML = new XML( fs.readUTFBytes( fs.bytesAvailable ));
+				fs.close();
+				
+				_ResPath = cfg.ResourcePath.text();
+				
+				var f:File;
+				try {
+					f = new File(_ResPath);
+				}catch( e:Error){
+				}
+				if( f==null || !f.exists ) {
+					f = new File( File.applicationDirectory.nativePath );
+					f = f.resolvePath(_ResPath);
+					_ResPath = f.nativePath;
+				}
+				_ResPath = _ResPath.replace( /\\/g, "/" );
+				
+				SwitchLang( "debug" );
+			}
+			
+			private function SwitchLang( lang:String ):void {
+				if(_Lang==lang) return ;
+				_Lang = lang;
+				Configs.Lang = _Lang;
+				GlobalVariables.Lang = _Lang;
+				TextFormatConst.UpdateFont(GlobalVariables.Font);
+				lang += "/";
+				
+				TextManager.Clear();
+				XmlManager.Clear();
+				
+				Configs.ResRootPath = _ResPath + "/";
+				Configs.StaticDataPath = _ResPath + "/" + GlobalConst.RESOURCE_STATIC_DATA + "StaticData_" + lang;
+				
+				Configs.ImageSetPath = _ResPath + "/"+ GlobalConst.RESOURCE_IMAGE_SET;
+				Configs.TextPath = _ResPath + "/"+ GlobalConst.RESOURCE_TEXT + "Text_" + lang;
+				Configs.MapPath = _ResPath + "/"+ GlobalConst.RESOURCE_MAP + "Map_" + lang;
+				Configs.ImagePath = _ResPath + "/"+ GlobalConst.RESOURCE_IMAGE;
+				Configs.SoundPath = _ResPath + "/"+ GlobalConst.RESOURCE_SOUND;
+				AirClassLoader.Instance.Load(Configs.ImagePath+"CityFightIcon/ZD11.swf");
+				//读取图像配置
+				var file:File = new File( Configs.ImageSetPath+"config.xml" );
+				var fs:FileStream = new FileStream();
+				fs.open( file, FileMode.READ );
+				Configs.ResourceCfg = new XML( fs.readUTFBytes( fs.bytesAvailable ));
+				fs.close();
+				
+				file = new File( _ResPath + "/" + GlobalConst.RESOURCE_STATIC_DATA + StaticFileConst.WIN_DATA + ".xml" );
+				fs.open( file, FileMode.READ );
+				XmlManager.LoadFile( file );
+				fs.close();
+				
+				//读取静态数据
+				file = new File( Configs.StaticDataPath );
+				var fileList:Array = file.getDirectoryListing();
+				
+				while ( fileList.length>0 )
+				{
+					file = fileList.shift();
+					
+					if ( file.isDirectory )
+					{
+						if ( file.name!=".svn" )
+						{
+							fileList = fileList.concat( file.getDirectoryListing());
+						}
+					}
+					else if ( file.extension.toLowerCase()=="xml" )
+					{
+						XmlManager.LoadFile( file );
+					}
+				}
+				
+				//读取文本内容
+				file = new File( Configs.TextPath );
+				fileList = file.getDirectoryListing();
+				
+				while ( fileList.length>0 )
+				{
+					file = fileList.shift();
+					
+					if ( file.isDirectory )
+					{
+						if ( file.name!=".svn" )
+						{
+							fileList = fileList.concat( file.getDirectoryListing());
+						}
+					}
+					else if ( file.extension.toLowerCase()=="xml" )
+					{
+						TextManager.LoadTextFile( file );
+					}
+				}
+				
+				if ( editor )
+				{
+					editor.Reload();
+				}
+			}
+			
+			
+			private function ShowEditor( type:String, itemData:* = null ):void
+			{
+				if ( _CurrEditorType==type )
+				{
+					return;
+				}
+				content.removeAllChildren();
+				editor = editorCache[type];
+				_CurrEditorType = type;
+				
+				if ( editor==null )
+				{
+					switch ( type )
+					{
+						/*case EditorTypeConst.TEANSLATE:
+							//翻译
+							editor = new TranslateEditor();
+							(editor as TranslateEditor).Lang = itemData.@lang;
+							break;
+						case EditorTypeConst.NPC_DIALOG:
+							editor = new NpcDialogEditor();
+							break;
+						case EditorTypeConst.CASTLE:
+							editor = new CastleMapEditor();
+							break;
+						case EditorTypeConst.AREA:
+							editor = new AreaMapEditor();
+							break;
+						case EditorTypeConst.CAMPAIGN:
+							editor = new CampaignMapEditor();
+							break;
+						case EditorTypeConst.HOLIDAY_CAMPAIGN:
+							editor = new HolidayMapEditor();
+							break;
+						case EditorTypeConst.RESOURCE:
+							editor = new ResMapEditor();
+							break;
+						case EditorTypeConst.TOWER:
+							editor = new TowerMapEditor();
+							break;
+						case EditorTypeConst.WAR:
+							editor = new WarMapEditor();
+							break;
+						case EditorTypeConst.WARWORLD:
+							editor = new WarWorldMapEditor();
+							break;
+						case EditorTypeConst.FORMATION:
+							editor = new FormationEditor();
+							break;
+						case EditorTypeConst.WORLD:
+							editor = new WorldMapEditor();
+							break;
+						case EditorTypeConst.GENERAL:
+							editor = new GeneralEditor();
+							break;
+						case EditorTypeConst.TECH:
+							editor = new TechEditor();
+							break;
+						case EditorTypeConst.ITEM:
+							editor = new ItemEditor();
+							break;
+						case EditorTypeConst.SKILL:
+							editor = new SkillEditor();
+							break;
+						case EditorTypeConst.SOLDIER:
+							editor = new SoldierEditor();
+							break;
+						case EditorTypeConst.INTENSIFY:
+							editor = new IntensifyEditor();
+							break;
+						case EditorTypeConst.TASK:
+							editor = new TaskEditor();
+							break;
+						case EditorTypeConst.WAR_TASK:
+							editor = new WarTaskEditor();
+							break;
+						case EditorTypeConst.NEXTSOLDIER:
+							editor = new NextSoldierEditor();
+							break;
+						case EditorTypeConst.PRESTIGE:
+							editor = new PrestigeEditor();
+							break;
+						case EditorTypeConst.LEVYEVENT:
+							editor = new LevyEventEditor();
+							break;
+						case EditorTypeConst.PRODUCT:
+							editor = new ProductEditor();
+							break;
+						case EditorTypeConst.Types:
+							editor = new TypesEditor();
+							break;
+						case EditorTypeConst.APPOINT:
+							editor = new AppointEditor();
+							break;
+						case EditorTypeConst.ACTIVITY:
+							editor = new ActivityEditor();
+							break;
+						case EditorTypeConst.TEXTEDIT:
+							editor = new TextEditor();
+							break;
+						case EditorTypeConst.GUIDE:
+							editor = new GuideEditor();
+							break;
+						case EditorTypeConst.VIP_CFG:
+							editor = new VipCfgEditor();
+							break;
+						case EditorTypeConst.HELP:
+							editor = new HelpEditor();
+							break;
+						case EditorTypeConst.LEVEL_LIMIT:
+							editor = new LvLimitEditor();
+							break;
+						case EditorTypeConst.PATROL_AREA:
+							editor = new AreaEditor();
+							break;
+						case EditorTypeConst.PATROL_LOCATION:
+							editor = new LocationEditor();
+							break;
+						case EditorTypeConst.PATROL_PERSON:
+							editor = new PersonEditor();
+							break;
+						case EditorTypeConst.PATROL_MAN:
+							editor = new ManEditor();
+							break;
+						case EditorTypeConst.PATROL_CFG:
+							editor = new PatrolCfgEditor();
+							break;
+						case EditorTypeConst.COMPOSITE:
+							editor = new CompositeEditor();
+							break;
+						case EditorTypeConst.ONLINEREWARD:
+							editor = new OnLineRewardEditor();
+							break;
+						case EditorTypeConst.GENERAL_CARD:
+							editor = new GeneralCardEditor();
+							break;
+						case EditorTypeConst.MEDAL:
+							editor = new MedalEditor();
+							break;
+						case EditorTypeConst.RECAST:
+							editor = new RecastEditor();
+							break;
+						case EditorTypeConst.HOLIDAY:
+							editor = new HolidayEditor();
+							break;
+						case EditorTypeConst.HUNTING:
+							editor = new HuntingEditor();
+							break;
+						case EditorTypeConst.LAYERS:
+							editor = new LayersEditor();
+							break;
+						case EditorTypeConst.AFFAIRS:
+							editor = new InternalAffairsEditor();
+							break;
+						case EditorTypeConst.STAR:
+							editor = new StarEditor();
+							break;
+						case EditorTypeConst.GENERAL_SOUL:
+							editor = new GeneralSoulEditor();
+							break;
+						case EditorTypeConst.NATION_POS:
+							editor = new NationOfficeEditor();
+							break;
+						case EditorTypeConst.LIVENESS:
+							editor = new LivenessEditor();
+							break;
+						case EditorTypeConst.SHIP:
+							editor = new ShipEditor();
+							break;
+						case EditorTypeConst.MATERIAL:
+							editor = new MaterialEditor();
+							break;
+						case EditorTypeConst.SEA_TRADE:
+							editor = new SeaTraderEditor();
+							break;
+						case EditorTypeConst.SEAPORT:
+							editor = new SeaPortMapEditor();
+							break;
+						case EditorTypeConst.SEA_CAMPAIGN:
+							editor = new SeaCampaignMapEditor();
+							break;
+						case EditorTypeConst.JUG:
+							editor = new JugEditor();
+							break;
+						case EditorTypeConst.ETCHED:
+							editor = new EtchedEditor();
+							break;
+						case EditorTypeConst.CAST:
+							editor = new CastEditor();
+							break;
+						case EditorTypeConst.KING_TOWER:
+							editor = new KingTowerEditor();
+							break;
+						case EditorTypeConst.CITY_FIGHT_MAP:
+							editor = new CityFightMapEditor();
+							break;
+						case EditorTypeConst.CITY_FIGHT_MAP2:
+							editor = new CityFightMapEditor2();
+							break;
+						case EditorTypeConst.CITY_FIGHT_ITEM:
+							editor = new CityFightItemEditor();
+							break;
+						case EditorTypeConst.CITY_FIGHT_SOLDIER:
+							editor = new CityFightSoldierEditor();
+							break;
+						case EditorTypeConst.CITY_FIGHT_EXCHANGE:
+							editor = new CityFightExchangeEditor();
+							break;
+						case EditorTypeConst.WOMEN:
+							editor = new WomenEditor();
+							break;
+						case EditorTypeConst.WIFE:
+							editor = new WifeEditor();
+							break;
+						case EditorTypeConst.FAMOUS:
+							editor = new FamousEditor();
+							break;
+						case EditorTypeConst.WOMEN_TALK:
+							editor = new TalkEditor();
+							break;
+						case EditorTypeConst.HOBBY:
+							editor = new HobbyEditor();
+							break;
+						case EditorTypeConst.CHILD_TRAIN:
+							editor = new ChildTrainEditor();
+							break;
+						case EditorTypeConst.CHILD_SKILL:
+							editor = new ChildSkillEditor();
+							break;
+						case EditorTypeConst.WOMAN_LEVEL:
+							editor = new WifeLevelEditor();
+							break;
+						case EditorTypeConst.SPIN_WIN:
+							editor = new SpinWinEditor();
+							break;*/
+					}
+					editorCache[type] = editor;
+				}
+				content.addChild( editor as DisplayObject );
+				editor.Init();
+				EnableMenus();
+			}
+			
+			private function EnableMenus():void
+			{
+				var item:MenuBarItem = menuBar.menuBarItems[1] as MenuBarItem;
+				var obj:XMLList = item.data.menuitem;
+				
+				for ( var i:int=0; i<obj.length(); i++ )
+				{
+					var str:String = obj[i].@data;
+					
+					if ( str==MENU_SAVE || str==MENU_RELOAD ||
+						str==MENU_EXPORT || str==MENU_IMPORT )
+					{
+						obj[i].@enabled = true;
+					} 
+				}
+			}
+			/**导出*/
+			private function MapExport_OnSelect( e:Event ):void
+			{
+				_CurrFile.removeEventListener( Event.SELECT, MapExport_OnSelect );
+				_CurrFile = e.target as File;
+				
+				if ( _CurrFile.extension==null || _CurrFile.extension.toLowerCase()!="xml" )
+				{
+					_CurrFile.url += ".xml"
+				}
+				editor.SaveAs( _CurrFile );
+			}
+		]]>
+	</fx:Script>
+	<mx:MenuBar id="menuBar"
+				width="100%"
+				labelField="@label"
+				itemClick="MenuItem_OnClick(event);"
+				dataProvider="{_MenuCollection}">
+	</mx:MenuBar>
+	<mx:Canvas id="content"
+			   width="100%"
+			   height="100%">
+	</mx:Canvas>
+</s:WindowedApplication>

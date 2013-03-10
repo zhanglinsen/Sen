@@ -1,0 +1,16 @@
+package uqee.lyingdragon.loader
+{
+	import flash.system.LoaderContext;
+	
+	import uqee.core.loader.ImageLoader;
+	
+	public class AirImageLoader extends ImageLoader
+	{
+		public function AirImageLoader()
+		{
+			var ctx:LoaderContext = new LoaderContext();
+			ctx.allowLoadBytesCodeExecution = true;
+			super(ctx);
+		}
+	}
+}

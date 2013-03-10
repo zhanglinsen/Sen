@@ -1,0 +1,1100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:VBox xmlns:mx="http://www.adobe.com/2006/mxml"
+         implements="project.editors.editor.IEditor"
+         width="100%"
+         height="100%"
+         fontSize="12"
+         backgroundColor="0xFFFFFF">
+    <mx:Script>
+        <![CDATA[
+			import com.greensock.loading.XMLLoader;
+			
+			import mx.collections.ArrayCollection;
+			import mx.collections.XMLListCollection;
+			import mx.containers.FormItem;
+			import mx.controls.Alert;
+			import mx.controls.Text;
+			import mx.controls.TextInput;
+			import mx.events.MenuEvent;
+			import mx.managers.PopUpManager;
+			
+			import project.core.text.HyperText;
+			import project.core.text.SimpleText;
+			import project.core.utils.XmlUtils;
+			import project.editors.events.ObjectEvent;
+			import project.editors.manager.TextManager;
+			import project.editors.manager.XmlManager;
+			import project.editors.utils.FileUtils;
+            
+
+            private var _Dict:Dictionary = new Dictionary();
+            private var _PreviewText:TextField;
+            [Bindable]
+            private var _MenuList:XMLListCollection = new XMLListCollection();
+            [Bindable]
+            private var _TypeList:ArrayCollection = new ArrayCollection();
+
+            public function Init():void
+            {
+                _Dict["String"] = "文本";
+                _Dict["ActorName"] = "角色名";
+                _Dict["NewLine"] = "换行";
+                _Dict["DynamicString"] = "动态文本";
+                _Dict["SimpleText"]="简单文本";
+
+                _TypeList.addItem({ label:"新建" });
+                _TypeList.addItem({ label:"文本",data:"String" });
+                _TypeList.addItem({ label:"角色名",data:"ActorName" });
+                _TypeList.addItem({ label:"换行",data:"NewLine" });
+                _TypeList.addItem({ label:"动态文本",data:"DynamicString" });
+                _PreviewText = new TextField();
+                _PreviewText.multiline = true;
+                _PreviewText.wordWrap = true;
+                _PreviewText.width = 800;
+                _PreviewText.height = 100;
+                preview.addChild( _PreviewText );
+            }
+
+            public function Export():XML
+            {
+                var xml:XML = <Text />;
+
+                for each ( var x:XML in _NodeArray.source )
+                {
+                    xml.appendChild( x );
+                }
+                return xml;
+            }
+
+            private var _FileStream:FileStream;
+            private var _File:File;
+            [Bindable]
+            private var _NodeArray:XMLListCollection = new XMLListCollection();
+            [Bindable]
+            private var _TextList:XMLListCollection = new XMLListCollection();
+
+            public function Import( file:File ):void
+            {
+                _PreviewText.text = "";
+
+                if ( !file.exists )
+                {
+                    Alert.show( "文件加载失败！" );
+                    return;
+                }
+                _File = file;
+                XML.ignoreWhitespace = false;
+				XML.prettyPrinting = false;
+                _FileStream.open( file, FileMode.READ );
+                var xml:XML = new XML( _FileStream.readUTFBytes( _FileStream.bytesAvailable ));
+                _FileStream.close();
+                Parse( xml );
+            }
+			private var _FileName:String;
+			public function set FileName(val:String):void {
+				_FileName = val;
+			}
+			public function get FileName():String {
+				return _FileName;
+			}
+            public function Reload():void
+            {
+                Import( _File );
+            }
+
+            override protected function createChildren():void
+            {
+                super.createChildren();
+                _FileStream = new FileStream();
+            }
+
+
+            private var _MaxIndex:int;
+
+            public function Parse( xml:XML ):void
+            {
+                _NodeArray.source = xml.children();
+
+                for ( var i:int=_NodeArray.length-1; i>=0; i-- )
+                {
+                    if ( _NodeArray[i].nodeKind()!="element" )
+                    {
+                        _NodeArray.removeItemAt( i );
+                    }
+                }
+                datagrid.selectedItem = null;
+                datagrid.selectedIndex = 0;
+                Node_OnChange();
+            }
+
+            public function Save():void
+            {
+                var xml:XML = Export();
+
+                if ( FileUtils.SaveXml( _File, xml))
+                {
+                    TextManager.UpdateText( _File.name, xml );
+                    Alert.show( "保存成功." );
+                }
+            }
+
+            public function SaveAs( file:File ):void
+            {
+                if ( FileUtils.SaveXml( file, Export()))
+                {
+                    TextManager.UpdateText( file.name, Export());
+                    Alert.show( "保存成功." );
+                }
+            }
+
+            //---------------------------------节点浏览-----------------------			
+
+
+            /**
+             * 创建新节点
+             * */
+            public function createNewString( node:XML ):void
+            {
+                _NodeArray.addItem( node );
+                datagrid.selectedIndex = _NodeArray.length-1;
+                Node_OnChange();
+            }
+
+            /**
+             * 初始化新节点
+             * */
+            private var _CreateXmlDialog:CreateXmlNode;
+
+            private function initializeNewString( event:MouseEvent ):void
+            {
+                if ( !_CreateXmlDialog )
+                {
+                    _CreateXmlDialog = new CreateXmlNode();
+                    _CreateXmlDialog.addEventListener( ObjectEvent.NEW_DATA, OnCreateNode );
+                }
+                PopUpManager.addPopUp( _CreateXmlDialog, this.parent, true );
+                PopUpManager.centerPopUp( _CreateXmlDialog );
+            }
+
+            private function OnCreateNode( e:ObjectEvent ):void
+            {
+                var xml:XML;
+
+                for ( var i:int = 0; i<_NodeArray.length; i++ )
+                {
+                    if ( e.Data.ident == String( _NodeArray[ i ].@ident ))
+                    {
+                        Alert.show( "此ID已经存在，请重新创建" );
+                        return;
+                    }
+                }
+
+                if ( e.Data.type == 1 )
+                {
+                    xml = <SimpleText />;
+                    xml.@ident = e.Data.ident;
+                }
+                else if ( e.Data.type == 2 )
+                {
+                    xml = <HyperText />;
+                    xml.@ident = e.Data.ident;
+                }
+                createNewString( xml );
+            }
+
+            /**
+             * 删除节点
+             * */
+            public function deleteStringNode( event:MouseEvent ):void
+            {
+                _NodeArray.removeItemAt( datagrid.selectedIndex );
+
+                if ( _NodeArray.length > 0 )
+                {
+                    datagrid.selectedItem = _NodeArray[0];
+                }
+                Node_OnChange();
+
+            }
+
+            /**
+             * 添加节点
+             * */
+            public function addItem( item:String, label:String ):void
+            {
+                datagrid.selectedItem.appendChild( <{[item]} /> );
+                InitTextList( datagrid.selectedItem.children());
+
+                if ( _TextList.length > 0 )
+                {
+                    itemLists.selectedIndex = _TextList.length - 1;
+                    ItemLists_OnChange();
+                }
+
+                encapsulationXml();
+            }
+
+            /**
+             * 删除节点
+             * */
+            public function deleteNode():void
+            {
+                var index:int = itemLists.selectedIndex;
+
+                if ( index != -1 )
+                {
+                    _TextList.removeItemAt( index );
+                    _TextList.refresh();
+
+//					delete datagrid.selectedItem.children()[index];	
+//					InitTextList(datagrid.selectedItem.children());	
+                    if ( _TextList.length > 0 )
+                    {
+                        itemLists.selectedIndex = 0;
+                    }
+                }
+                encapsulationXml();
+            }
+
+            /**
+             * 上移节点
+             * */
+            public function upMoveNode():void
+            {
+                var index:int = itemLists.selectedIndex;
+
+                if ( !itemLists.selectedItem || index == -1 || index == 0 )
+                {
+                    return;
+                }
+
+                _TextList.setItemAt( itemLists.selectedItem, index-1 );
+
+//				_TextList.removeItemAt( index );
+                _TextList.refresh();
+
+//				var xmlChild:XML = datagrid.selectedItem.children()[index];	
+//				delete datagrid.selectedItem.children()[index];				
+//				datagrid.selectedItem.insertChildBefore(datagrid.selectedItem.children()[index-1],xmlChild);
+//				InitTextList(datagrid.selectedItem.children());	
+                itemLists.selectedIndex = index - 1;
+                encapsulationXml();
+            }
+
+            /**
+             * 下移节点
+             * */
+            public function downMoveNode():void
+            {
+                var index:int = itemLists.selectedIndex;
+
+                if ( !itemLists.selectedItem || index == -1 || index == _NodeArray.length-1 )
+                {
+                    return;
+                }
+                _TextList.setItemAt( itemLists.selectedItem, index+1 );
+                _TextList.refresh();
+//				var xmlChild:XML = datagrid.selectedItem.children()[index];	
+//				delete datagrid.selectedItem.children()[index];					
+//				datagrid.selectedItem.insertChildAfter(datagrid.selectedItem.children()[index],xmlChild);	
+//				
+//				InitTextList(datagrid.selectedItem.children());	
+                itemLists.selectedIndex = index + 1;
+                encapsulationXml();
+            }
+
+            private function Node_OnChange():void
+            {
+                if ( !datagrid.selectedItem )
+                {
+                    _TextList.source = null;
+                    Editable = false;
+                    _PreviewText.text = "";
+                    return;
+                }
+
+                if ( datagrid.selectedItem.name() == "SimpleText" )
+                {
+                    InitTextList( null );
+                }
+                else
+                {
+                    InitTextList( datagrid.selectedItem.children());
+                }
+
+//                if ( items.length() > 0 )
+//                {
+//                    itemLists.selectedIndex = 0;
+//                }
+                Editable = true;
+
+                UpdateItalic();
+                UpdateBold();
+                UpdateColor();
+                UpdateSize();
+                UpdateAlign();
+//				UpdateBgColor();
+                UpdateUnderLine();
+                UpdateHyperBold();
+                UpdateHyperItlatic();
+                UpdateHyperUnderLine();
+                UpdateHyperColor();
+                UpdateHyperSize();
+                UpdateHyperAlign();
+
+                if ( datagrid.selectedItem.name() == "SimpleText" )
+                {
+                    Editable = false;
+
+                    if ( datagrid.selectedItem.text()[0])
+                    {
+                        textContent.text = datagrid.selectedItem.text()[0];
+                    }
+                }
+                encapsulationXml();
+            }
+
+            private function InitTextList( list:XMLList ):void
+            {
+//				_TextList.removeAll();
+                itemLists.selectedItem = null;
+                _TextList.source = list;
+
+//				var list:XMLList = xmlList.copy();
+                for ( var i:int=_TextList.length-1; i>=0; i-- )
+                {
+                    if ((_TextList[i] as XML).nodeKind()=="text" )
+                    {
+                        var str:String = _TextList[i].toString().replace( /[\r\n\t\s]+/g, "" );
+
+                        if ( str=="" )
+                        {
+                            _TextList.removeItemAt( i );
+                        }
+                    }
+                }
+//				_TextList.source = xmlList.copy();
+                _TextList.refresh();
+                itemLists.selectedIndex = 0;
+            }
+
+            private function CreateFormItem( index:int, label:String, xml:XML ):void
+            {
+                var formItem:FormItem = new FormItem();
+                formItem.label = label;
+                formItem.percentWidth = 100;
+                itemLists.addChild( formItem );
+
+                if ( xml.name() == "NewLine" )
+                {
+                    return;
+                }
+                var textInput:TextInput = new TextInput();
+                textInput.text = xml.text();
+                textInput.name = "text_"+index;
+                textInput.percentWidth = 100;
+
+                if ( xml.name() == "ActorName" || xml.name() == "DynamicString" )
+                {
+                    textInput.editable = false;
+                }
+
+                if ( xml.@bold == "true" )
+                {
+                    textInput.setStyle( 'fontWeight', 'bold' );
+                }
+
+                if ( xml.@italic == "true" )
+                {
+                    textInput.setStyle( 'fontStyle', 'italic' );
+                }
+
+                if ( int( xml.@size ) > 0 )
+                {
+                    textInput.setStyle( 'fontSize', xml.@size );
+                }
+
+                if ( int( xml.@color ))
+                {
+                    textInput.setStyle( 'color', xml.@color );
+                }
+
+                if ( String( xml.@align ))
+                {
+                    textInput.setStyle( 'textAlign', xml.@align );
+                }
+                formItem.addChild( textInput );
+            }
+
+            private function Type_OnChange():void
+            {
+                if ( nodeType.selectedItem.label == "新建" )
+                {
+                    return;
+                }
+                addItem( nodeType.selectedItem.data, nodeType.selectedItem.label );
+                nodeType.selectedIndex = 0;
+            }
+
+            private function Bold_OnChange():void
+            {
+//				var index:int = itemLists.selectedIndex;
+                if ( fontBold.selected )
+                {
+                    itemLists.selectedItem.@bold = true;
+                }
+                else
+                {
+                    delete itemLists.selectedItem.@bold;
+                }
+                encapsulationXml();
+            }
+
+            private function UpdateBold():void
+            {
+                fontBold.selected = false;
+
+                if ( !itemLists.selectedItem )
+                {
+                    return;
+                }
+                var bool:Object = itemLists.selectedItem.@bold;
+
+                if ( bool == "true" )
+                {
+                    fontBold.selected = true;
+                }
+                encapsulationXml();
+            }
+
+            private function Color_OnChange():void
+            {
+                var index:int = itemLists.selectedIndex;
+                itemLists.selectedItem.@color = "0x"+fontColor.selectedColor.toString( 16 );
+                encapsulationXml();
+            }
+
+            /* private function BgColor_OnChange():void
+               {
+               var index:int = itemLists.selectedIndex;
+               itemLists.selectedItem.@bgColor = "0x"+bgColor.value.toString(16);
+               encapsulationXml();
+               }
+
+               private function UpdateBgColor():void
+               {
+               bgColor.selectedColor = 0x000000;
+               var index:int = itemLists.selectedIndex;
+               if(index == -1) return;
+               var value:uint = int(itemLists.selectedItem.@bgColor);
+               if(value)
+               {
+               bgColor.selectedColor = value;
+               }
+               encapsulationXml();
+             } */
+
+            private function UpdateColor():void
+            {
+                fontColor.selectedColor = 0x000000;
+
+                if ( !itemLists.selectedItem )
+                {
+                    return;
+                }
+                var value:uint = int( itemLists.selectedItem.@color );
+
+                if ( value )
+                {
+                    fontColor.selectedColor = value;
+                }
+                encapsulationXml();
+            }
+
+            private function Italic_OnChange():void
+            {
+                var index:int = itemLists.selectedIndex;
+
+                if ( itlatic.selected )
+                {
+                    itemLists.selectedItem.@italic = true;
+                }
+                else
+                {
+                    delete itemLists.selectedItem.@italic;
+                }
+                encapsulationXml();
+            }
+
+            private function UpdateItalic():void
+            {
+                itlatic.selected = false;
+
+                if ( !itemLists.selectedItem )
+                {
+                    return;
+                }
+                var bool:Object = itemLists.selectedItem.@italic;
+
+                if ( bool == "true" )
+                {
+                    itlatic.selected = true;
+                }
+                encapsulationXml();
+            }
+
+            private function UnderLine_OnChange():void
+            {
+                var index:int = itemLists.selectedIndex;
+
+                if ( underLine.selected )
+                {
+                    itemLists.selectedItem.@underline = true;
+                }
+                else
+                {
+                    delete itemLists.selectedItem.@underline;
+                }
+                encapsulationXml();
+            }
+
+            private function UpdateUnderLine():void
+            {
+                underLine.selected = false;
+
+                if ( !itemLists.selectedItem )
+                {
+                    return;
+                }
+                var bool:Object = itemLists.selectedItem.@underLine;
+
+                if ( bool == "true" )
+                {
+                    underLine.selected = true;
+                }
+                encapsulationXml();
+            }
+
+            private function Size_OnChange():void
+            {
+                var index:int = itemLists.selectedIndex;
+                itemLists.selectedItem.@size = size.value;
+                encapsulationXml();
+            }
+
+            private function UpdateSize():void
+            {
+                size.value = 12;
+
+                if ( !itemLists.selectedItem )
+                {
+                    return;
+                }
+                var fontSize:int = int( itemLists.selectedItem.@size );
+
+                if ( fontSize )
+                {
+                    size.value = Number( fontSize );
+                }
+                encapsulationXml();
+            }
+
+            private function Align_OnChange():void
+            {
+                var index:int = itemLists.selectedIndex;
+                itemLists.selectedItem.@align = fontAlign.selectedItem;
+                encapsulationXml();
+            }
+
+            private function UpdateAlign():void
+            {
+                fontAlign.selectedIndex = 0;
+
+                if ( !itemLists.selectedItem )
+                {
+                    return;
+                }
+                var alignValue:String = String( itemLists.selectedItem.@align );
+
+                if ( alignValue )
+                {
+                    switch ( alignValue )
+                    {
+                        case "left":
+                            fontAlign.selectedIndex = 0;
+                            break;
+                        case "center":
+                            fontAlign.selectedIndex = 1;
+                            break;
+                        case "right":
+                            fontAlign.selectedIndex = 2;
+                            break;
+                    }
+                }
+
+                encapsulationXml();
+            }
+
+            public function set Editable( val:Boolean ):void
+            {
+                fontBold.enabled = true;
+                fontColor.enabled = true;
+                itlatic.enabled = true;
+                size.enabled = true;
+                fontAlign.enabled = true;
+                underLine.enabled = true;
+                hyperBold.enabled = true;
+                hyperItlatic.enabled = true;
+                hyperUnderLine.enabled = true;
+                hyperColor.enabled = true;
+                hyperSize.enabled = true;
+                hyperAlign.enabled = true;
+
+                if ( !val )
+                {
+                    fontBold.enabled = false;
+                    fontColor.enabled = false;
+                    itlatic.enabled = false;
+                    size.enabled = false;
+                    fontAlign.enabled = false;
+                    underLine.enabled = false;
+                    hyperBold.enabled = false;
+                    hyperItlatic.enabled = false;
+                    hyperUnderLine.enabled = false;
+                    hyperColor.enabled = false;
+                    hyperSize.enabled = false;
+                    hyperAlign.enabled = false;
+                }
+            }
+
+            public function encapsulationXml():void
+            {
+                _PreviewText.width = preview.width;
+
+                if ( datagrid.selectedItem.children().length() > 0 )
+                {
+                    if ( datagrid.selectedItem.name() == "HyperText" )
+                    {
+                        var hyperText:HyperText = new HyperText();
+                        hyperText.Parse( datagrid.selectedItem as XML );
+
+                        var obj:Object = {};
+
+                        if ( datagrid.selectedItem.ActorName.length() > 0 )
+                        {
+                            obj.ActorName = "{角色名}";
+                        }
+                        var list:XMLList = datagrid.selectedItem.DynamicString;
+                        var array:Array = [];
+
+                        for ( var i:int = 0; i < list.length(); i++ )
+                        {
+                            array.push( "{"+i+"}" );
+                        }
+                        obj.DynamicString = array;
+                        hyperText.ToTextField( _PreviewText, null, null, obj );
+
+                    }
+                    else
+                    {
+                        var simpleText:SimpleText = new SimpleText();
+                        simpleText.Parse( datagrid.selectedItem as XML );
+                        simpleText.ToTextField( _PreviewText );
+                    }
+                }
+                else
+                {
+                    _PreviewText.text = "";
+                }
+                preview.height = _PreviewText.textHeight;
+            }
+
+            private function ItemListsFunction( item:Object ):String
+            {
+                return _Dict[item.name()];
+            }
+
+            private function ItemLists_OnChange():void
+            {
+                textContent.editable = true;
+                Editable = true;
+
+                if ( itemLists.selectedItem.name() == "NewLine" )
+                {
+                    textContent.editable = false;
+                    Editable = false;
+                }
+
+                if ( itemLists.selectedItem.name() == "DynamicString" ||
+                    itemLists.selectedItem.name() == "ActorName" )
+                {
+                    textContent.editable = false;
+                }
+                UpdateItalic();
+                UpdateBold();
+                UpdateColor();
+                UpdateSize();
+                UpdateAlign();
+//				UpdateBgColor();
+                UpdateUnderLine();
+
+            }
+
+            private function OnTextChange():void
+            {
+                if ( datagrid.selectedItem.name() == "SimpleText" )
+                {
+                    if ( datagrid.selectedItem.text()[0])
+                    {
+                        delete datagrid.selectedItem.text()[0];
+                    }
+                    datagrid.selectedItem.appendChild( textContent.text );
+                }
+                else
+                {
+					(itemLists.selectedItem as XML).setChildren( new XML(textContent.text) );
+//                    datagrid.selectedItem.children()[itemLists.selectedIndex] = textContent.text;
+                }
+                encapsulationXml();
+            }
+
+            //------------------------------Hyper标签字体样式----------------------
+            private function HyperBold_OnChange():void
+            {
+                if ( hyperBold.selected )
+                {
+                    datagrid.selectedItem.@bold = "true";
+                }
+                else
+                {
+                    delete datagrid.selectedItem.@bold;
+                }
+                encapsulationXml();
+            }
+
+            private function UpdateHyperBold():void
+            {
+                hyperBold.selected = false;
+                var bool:Object = datagrid.selectedItem.@bold;
+
+                if ( bool == "true" )
+                {
+                    hyperBold.selected = true;
+                }
+                encapsulationXml();
+            }
+
+            private function HyperItlatic_OnChange():void
+            {
+                if ( hyperItlatic.selected )
+                {
+                    datagrid.selectedItem.@italic = true;
+                }
+                else
+                {
+                    delete datagrid.selectedItem.@italic;
+                }
+                encapsulationXml();
+            }
+
+            private function UpdateHyperItlatic():void
+            {
+                hyperItlatic.selected = false;
+                var bool:Object = datagrid.selectedItem.@italic;
+
+                if ( bool == "true" )
+                {
+                    hyperItlatic.selected = true;
+                }
+                encapsulationXml();
+            }
+
+            private function HyperUnderLine_OnChange():void
+            {
+                if ( hyperUnderLine.selected )
+                {
+                    datagrid.selectedItem.@underline = true;
+                }
+                else
+                {
+                    delete datagrid.selectedItem.@underline;
+                }
+                encapsulationXml();
+            }
+
+            private function UpdateHyperUnderLine():void
+            {
+                hyperUnderLine.selected = false;
+                var bool:Object = datagrid.selectedItem.@underLine;
+
+                if ( bool == "true" )
+                {
+                    hyperUnderLine.selected = true;
+                }
+                encapsulationXml();
+            }
+
+            private function HyperColor_OnChange():void
+            {
+                datagrid.selectedItem.@color = "0x"+hyperColor.selectedColor.toString( 16 );
+                encapsulationXml();
+            }
+
+            private function UpdateHyperColor():void
+            {
+                hyperColor.selectedColor = 0x000000;
+                var value:uint = int( datagrid.selectedItem.@color );
+
+                if ( value )
+                {
+                    hyperColor.selectedColor = value;
+                }
+                encapsulationXml();
+            }
+
+            private function HyperSize_OnChange():void
+            {
+                datagrid.selectedItem.@size = hyperSize.value;
+                encapsulationXml();
+            }
+
+            private function UpdateHyperSize():void
+            {
+                hyperSize.value = 12;
+                var fontSize:int = int( datagrid.selectedItem.@size );
+
+                if ( fontSize )
+                {
+                    hyperSize.value = Number( fontSize );
+                }
+                encapsulationXml();
+            }
+
+            private function HyperAlign_OnChange():void
+            {
+                datagrid.selectedItem.@align = hyperAlign.selectedItem;
+                encapsulationXml();
+            }
+
+            private function UpdateHyperAlign():void
+            {
+                hyperAlign.selectedIndex = 0;
+                var alignValue:String = String( datagrid.selectedItem.@align );
+
+                if ( alignValue )
+                {
+                    switch ( alignValue )
+                    {
+                        case "left":
+                            hyperAlign.selectedIndex = 0;
+                            break;
+                        case "center":
+                            hyperAlign.selectedIndex = 1;
+                            break;
+                        case "right":
+                            hyperAlign.selectedIndex = 2;
+                            break;
+                    }
+                }
+
+                encapsulationXml();
+            }
+        ]]>
+    </mx:Script>
+    <mx:HDividedBox width="100%"
+                    height="100%">
+        <mx:VBox width="100%"
+                 height="100%">
+            <mx:HBox width="100%"
+                     horizontalAlign="center">
+                <mx:Button x="13"
+                           y="1"
+                           label="新建"
+                           click="initializeNewString(event)"/>
+                <mx:Button x="100"
+                           y="1"
+                           label="删除"
+                           click="deleteStringNode(event)"
+                           enabled="{_NodeArray.length>0}"/>
+            </mx:HBox>
+            <mx:List width="100%"
+                     height="100%"
+                     id="datagrid"
+                     dataProvider="{_NodeArray}"
+                     labelField="@ident"
+                     change="Node_OnChange()"
+                     borderStyle="solid"
+                     borderColor="0x0"/>
+            <mx:Label text="文本整体样式"/>
+            <mx:VBox width="100%"
+                     height="100%"
+                     borderStyle="solid"
+                     borderColor="0x0">
+                <mx:Form width="100%"
+                         height="100%">
+                    <mx:FormItem label="id"
+                                 width="100%">
+                        <mx:TextInput id="hyperIdent"
+                                      width="100%"
+                                      text="{datagrid.selectedItem.@ident}"
+                                      change="datagrid.selectedItem.@ident = hyperIdent.text;_NodeArray.refresh();"/>
+                    </mx:FormItem>
+                    <mx:FormItem label="粗体"
+                                 width="100%">
+                        <mx:CheckBox id="hyperBold"
+                                     change="HyperBold_OnChange()"/>
+                    </mx:FormItem>
+                    <mx:FormItem label="斜体"
+                                 width="100%">
+                        <mx:CheckBox id="hyperItlatic"
+                                     change="HyperItlatic_OnChange()"/>
+                    </mx:FormItem>
+                    <mx:FormItem label="下划线"
+                                 width="100%">
+                        <mx:CheckBox id="hyperUnderLine"
+                                     change="HyperUnderLine_OnChange()"/>
+                    </mx:FormItem>
+                    <mx:FormItem label="颜色"
+                                 width="100%">
+                        <mx:ColorPicker id="hyperColor"
+                                        change="HyperColor_OnChange()"
+                                        enter="HyperColor_OnChange()"/>
+                    </mx:FormItem>
+                    <!--<mx:FormItem label="背景色" width="100%">
+                         <mx:ColorPicker id="bgColor" change="BgColor_OnChange()"/>
+                         </mx:FormItem>	-->
+                    <mx:FormItem label="字体大小"
+                                 width="100%">
+                        <mx:NumericStepper id="hyperSize"
+                                           width="100%"
+                                           maximum="100"
+                                           change="HyperSize_OnChange()"/>
+                    </mx:FormItem>
+                    <mx:FormItem label="位置"
+                                 width="100%">
+                        <mx:ComboBox id="hyperAlign"
+                                     width="100%"
+                                     change="HyperAlign_OnChange()">
+                            <mx:Array>
+                                <mx:String>left</mx:String>
+                                <mx:String>center</mx:String>
+                                <mx:String>right</mx:String>
+                            </mx:Array>
+                        </mx:ComboBox>
+                    </mx:FormItem>
+                </mx:Form>
+            </mx:VBox>
+        </mx:VBox>
+        <mx:VBox width="100%"
+                 height="100%">
+            <mx:HBox width="100%"
+                     height="25"
+                     horizontalGap="0">
+                <mx:ComboBox dataProvider="{_TypeList}"
+                             labelField="label"
+                             change="Type_OnChange()"
+                             width="100%"
+                             id="nodeType"
+                             enabled="{datagrid.selectedItem.name() == 'HyperText'}"/>
+                <mx:Button label="删除"
+                           width="100%"
+                           click="deleteNode()"
+                           enabled="{datagrid.selectedItem.name() == 'HyperText'}"/>
+                <mx:Button label="上移"
+                           width="100%"
+                           click="upMoveNode()"
+                           enabled="{datagrid.selectedItem.name() == 'HyperText'}"/>
+                <mx:Button label="下移"
+                           width="100%"
+                           click="downMoveNode()"
+                           enabled="{datagrid.selectedItem.name() == 'HyperText'}"/>
+            </mx:HBox>
+
+            <mx:List id="itemLists"
+                     borderColor="0x0"
+                     borderStyle="solid"
+                     width="100%"
+                     height="100%"
+                     dataProvider="{_TextList}"
+                     labelFunction="ItemListsFunction"
+                     change="ItemLists_OnChange()"/>
+            <mx:Label text="截取文本样式"/>
+            <mx:VBox width="100%"
+                     height="100%">
+                <mx:Form x="0"
+                         y="36"
+                         paddingBottom="5"
+                         paddingTop="5"
+                         paddingLeft="10"
+                         paddingRight="10"
+                         width="100%"
+                         height="100%"
+                         id="propertyList"
+                         borderColor="0x0"
+                         borderStyle="solid">
+                    <mx:FormItem label="文本"
+                                 width="100%">
+                        <mx:TextInput id="textContent"
+                                      width="100%"
+                                      text="{datagrid.selectedItem.name()=='HyperText' ? itemLists.selectedItem.text() : datagrid.selectedItem.text()}"
+                                      change="OnTextChange()"/>
+                    </mx:FormItem>
+                    <mx:FormItem label="粗体"
+                                 width="100%">
+                        <mx:CheckBox id="fontBold"
+                                     change="Bold_OnChange()"/>
+                    </mx:FormItem>
+                    <mx:FormItem label="斜体"
+                                 width="100%">
+                        <mx:CheckBox id="itlatic"
+                                     change="Italic_OnChange()"/>
+                    </mx:FormItem>
+                    <mx:FormItem label="下划线"
+                                 width="100%">
+                        <mx:CheckBox id="underLine"
+                                     change="UnderLine_OnChange()"/>
+                    </mx:FormItem>
+                    <mx:FormItem label="颜色"
+                                 width="100%">
+                        <mx:ColorPicker id="fontColor"
+                                        change="Color_OnChange()"
+                                        enter="Color_OnChange()"/>
+                    </mx:FormItem>
+                    <!--<mx:FormItem label="背景色" width="100%">
+                         <mx:ColorPicker id="bgColor" change="BgColor_OnChange()"/>
+                         </mx:FormItem>	-->
+                    <mx:FormItem label="字体大小"
+                                 width="100%">
+                        <mx:NumericStepper id="size"
+                                           width="100%"
+                                           maximum="100"
+                                           change="Size_OnChange()"/>
+                    </mx:FormItem>
+                    <mx:FormItem label="位置"
+                                 width="100%">
+                        <mx:ComboBox id="fontAlign"
+                                     width="100%"
+                                     change="Align_OnChange()">
+                            <mx:Array>
+                                <mx:String>left</mx:String>
+                                <mx:String>center</mx:String>
+                                <mx:String>right</mx:String>
+                            </mx:Array>
+                        </mx:ComboBox>
+                    </mx:FormItem>
+                </mx:Form>
+
+            </mx:VBox>
+        </mx:VBox>
+
+    </mx:HDividedBox>
+    <mx:Label text="预览效果"
+              width="100%"
+              height="20"/>
+    <mx:VBox width="100%"
+             height="100"
+             verticalScrollPolicy="on">
+        <mx:UIComponent width="100%"
+                        id="preview"/>
+    </mx:VBox>
+</mx:VBox>

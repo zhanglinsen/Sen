@@ -1,0 +1,14 @@
+package project.editors.loader
+{
+	import project.core.loader.ClassLoader;
+	
+	public class AirClassLoader extends ClassLoader
+	{
+		public static var Instance:AirClassLoader = new AirClassLoader();
+		public function AirClassLoader()
+		{
+			super();
+			_pContext.allowLoadBytesCodeExecution = true;
+		}
+	}
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Panel xmlns:mx="http://www.adobe.com/2006/mxml" width="325" height="192"
+		   fontSize="12" layout="absolute">
+	<mx:Script>
+		<![CDATA[
+			import mx.managers.PopUpManager;
+			
+			import project.editors.events.ObjectEvent;
+			
+			
+			public function closePopUp(event:MouseEvent):void
+			{
+				PopUpManager.removePopUp(this);
+			}
+			
+			public function create(event:MouseEvent):void
+			{
+				dispatchEvent(new ObjectEvent(ObjectEvent.NEW_DATA,{type:typeList.selectedIndex,ident:ident.text}));
+				PopUpManager.removePopUp(this);
+			}
+		]]>
+	</mx:Script>
+	<mx:Form width="305" height="110" id="form1">
+		<mx:FormItem label="文本类型" width="100%">
+			<mx:ComboBox width="100%" id="typeList">
+				<mx:Array>
+					<mx:String />
+					<mx:String>简单文本</mx:String>
+					<mx:String>超级文本</mx:String>
+				</mx:Array>
+			</mx:ComboBox>
+		</mx:FormItem>
+		<mx:FormItem label="ident" width="100%">
+			<mx:TextInput width="100%" id="ident" />
+		</mx:FormItem>
+	</mx:Form>
+	<mx:Button label="创建" click="create(event)" x="32" y="118"/>
+	<mx:Button label="取消" click="closePopUp(event)" x="230" y="118"/>
+</mx:Panel>

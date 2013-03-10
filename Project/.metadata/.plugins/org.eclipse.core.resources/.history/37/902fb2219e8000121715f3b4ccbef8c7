@@ -1,0 +1,14 @@
+package uqee.lyingdragon.loader
+{
+	import uqee.core.loader.ClassLoader;
+	
+	public class AirClassLoader extends ClassLoader
+	{
+		public static var Instance:AirClassLoader = new AirClassLoader();
+		public function AirClassLoader()
+		{
+			super();
+			_pContext.allowLoadBytesCodeExecution = true;
+		}
+	}
+}

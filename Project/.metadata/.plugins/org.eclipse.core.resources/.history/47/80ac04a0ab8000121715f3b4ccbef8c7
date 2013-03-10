@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cfg>
+    <ResourcePath>E:\项目中心\卧龙吟\wly_resource\Resource</ResourcePath>
+	<ResourcePath>../../../wly_resource/Resource</ResourcePath>
+</cfg>

@@ -1,0 +1,92 @@
+package uqee.core.global
+{
+	import flash.text.TextFormat;
+	import flash.text.TextFormatAlign;
+	import flash.utils.describeType;
+	
+	/**
+	 * 文本格式
+	 */
+	public final class TextFormatConst
+	{
+		private static var _Font:String = "";
+		public static function UpdateFont( val:String ):void {
+			if( val==_Font ) return ;
+			_Font = val;
+			var typeInfo:XML = describeType( TextFormatConst );
+			var properties:XMLList = typeInfo.constant;
+			
+			for each ( var propertyInfo:XML in properties )
+			{
+				var prop:String = propertyInfo.@name;
+				var obj:* = TextFormatConst[prop];
+				if( obj is TextFormat ) {
+					obj.font = val;
+					if( obj.size<=12 ) {
+						obj.size = GlobalVariables.FontSize;
+					}
+				}
+			}
+		}
+		public static const LABEL_WARNMSG:TextFormat = new TextFormat(GlobalVariables.Font, 16, 0xffff00, true, null, null, null, null, null, null, null, null, 3);
+		
+		public static const LABEL_GREEN:TextFormat = new TextFormat(GlobalVariables.Font, GlobalVariables.FontSize, Colors.GREEN);
+		
+		public static const LABEL_DARKWHITE:TextFormat = new TextFormat(GlobalVariables.Font, GlobalVariables.FontSize, Colors.DARK_WHITE, false, false, false, null, null, null, null, null, null, 4);
+		
+		public static const LABEL_RED:TextFormat = new TextFormat(GlobalVariables.Font, GlobalVariables.FontSize, 0xFF0000, false, false, false, null, null, TextFormatAlign.CENTER, null, null, null, 3);
+		public static const LABEL_RED_LEFT:TextFormat = new TextFormat(GlobalVariables.Font, GlobalVariables.FontSize, 0xFF0000, false, false, false, null, null, TextFormatAlign.LEFT, null, null, null, 3);
+		
+		public static const LABEL_LIGHT_YW:TextFormat = new TextFormat(GlobalVariables.Font, GlobalVariables.FontSize, Colors.LIGHT_YELLOW_WHITE, false, false, false, null, null, null, null, null, null, 3);
+		public static const LABEL_LIGHT_YW_Right:TextFormat = new TextFormat(GlobalVariables.Font, GlobalVariables.FontSize, Colors.LIGHT_YELLOW_WHITE, false, false, false, null, null, TextFormatAlign.RIGHT, null, null, null, 3);
+		public static const LABEL_LIGHT_YW_Center:TextFormat = new TextFormat(GlobalVariables.Font, GlobalVariables.FontSize, Colors.LIGHT_YELLOW_WHITE, false, false, false, null, null, TextFormatAlign.CENTER, null, null, null, 3);
+		
+		public static const LABEL_LIGHT_GRAY:TextFormat = new TextFormat(GlobalVariables.Font, GlobalVariables.FontSize, Colors.LIGHT_GRAY, false, false, false, null, null, null, null, null, null, 3);
+		public static const LABEL_LIGHT_GRAY_AlignRight:TextFormat = new TextFormat(GlobalVariables.Font, GlobalVariables.FontSize, Colors.LIGHT_GRAY, null, null, null, null, null, TextFormatAlign.RIGHT, null, null, null, 3);
+		public static const LABEL_LIGHT_GRAY_AlignCenter:TextFormat = new TextFormat(GlobalVariables.Font, GlobalVariables.FontSize, Colors.LIGHT_GRAY, null, null, null, null, null, TextFormatAlign.CENTER, null, null, null, 3);
+		
+		public static const LABEL_WHITE:TextFormat = new TextFormat(GlobalVariables.Font, GlobalVariables.FontSize, Colors.WHITE, false, false, false, null, null, null, null, null, null, 3);
+		public static const LABEL_WHITE_AlignCenter:TextFormat = new TextFormat(GlobalVariables.Font, GlobalVariables.FontSize, Colors.WHITE, null, null, null, null, null, TextFormatAlign.CENTER, null, null, null, 3);
+		public static const LABEL_WHITE_AlignRight:TextFormat = new TextFormat(GlobalVariables.Font, GlobalVariables.FontSize, Colors.WHITE, null, null, null, null, null, TextFormatAlign.RIGHT, null, null, null, 3);
+		
+		public static const LABEL_LIGHT_OGRANGE_CENTER:TextFormat = new TextFormat(GlobalVariables.Font, GlobalVariables.FontSize, Colors.LIGHT_ORANGE, null, null, null, null, null, TextFormatAlign.CENTER, null, null, null, 3);
+		
+		public static const LABEL_OGRANGE_CENTER:TextFormat = new TextFormat(GlobalVariables.Font, GlobalVariables.FontSize, 0XFFCC00, null, null, null, null, null, TextFormatAlign.CENTER, null, null, null, 3);
+		public static const LABEL_OGRANGE_LEFT:TextFormat = new TextFormat(GlobalVariables.Font, GlobalVariables.FontSize, 0XFFCC00, null, null, null, null, null, TextFormatAlign.LEFT, null, null, null, 3);
+		
+		public static const WIN_TITLE_LABEL_Left:TextFormat = new TextFormat(GlobalVariables.Font, GlobalVariables.FontSize, Colors.LIGHT_YELLOW, null, null, null, null, null, TextFormatAlign.LEFT, null, null, null, 3);
+		public static const WIN_TITLE_LABEL_Center:TextFormat = new TextFormat(GlobalVariables.Font, GlobalVariables.FontSize, Colors.LIGHT_YELLOW, null, null, null, null, null, TextFormatAlign.CENTER, null, null, null, 3);
+		public static const WIN_TITLE_LABEL_RIGHT:TextFormat = new TextFormat(GlobalVariables.Font, GlobalVariables.FontSize, Colors.LIGHT_YELLOW, null, null, null, null, null, TextFormatAlign.RIGHT, null, null, null, 3);
+		
+		/**
+		 * 0XE9E7CF
+		 */		
+		public static const LABEL_YELLOWWHITE:TextFormat = new TextFormat(GlobalVariables.Font,GlobalVariables.FontSize, Colors.YELLOW_WHITE,null, null, null, null, null, TextFormatAlign.CENTER, null, null, null, 3);
+		public static const LABEL_YELLOWWHITE_RIGHT:TextFormat = new TextFormat(GlobalVariables.Font,GlobalVariables.FontSize, Colors.YELLOW_WHITE,null, null, null, null, null, TextFormatAlign.RIGHT, null, null, null, 3);
+		public static const LABEL_YELLOWWHITE_LEFT:TextFormat = new TextFormat(GlobalVariables.Font, GlobalVariables.FontSize, Colors.YELLOW_WHITE, null, null, null, null, null, TextFormatAlign.LEFT, null, null, null, 3);
+		
+		public static const LABEL_YELLOW:TextFormat = new TextFormat(GlobalVariables.Font, GlobalVariables.FontSize, 0xffff00);
+		public static const LABEL_YELLOW_LEFT:TextFormat=new TextFormat(GlobalVariables.Font,GlobalVariables.FontSize, Colors.YELLOW,null, null, null, null, null, TextFormatAlign.LEFT, null, null, null, 3);
+		public static const LABEL_YELLOW_RIGHT:TextFormat = new TextFormat(GlobalVariables.Font, GlobalVariables.FontSize, Colors.YELLOW, null, null, null, null, null, TextFormatAlign.RIGHT);
+		public static const LABEL_YELLOW15_LEFT:TextFormat=new TextFormat(GlobalVariables.Font,15, Colors.YELLOW,null, null, null, null, null, TextFormatAlign.LEFT, null, null, null, 3);
+		public static const LABEL_YELLOW_TITLE:TextFormat=new TextFormat(GlobalVariables.Font, GlobalVariables.FontSize, 0xFFFFB0, null, null, null, null, null, TextFormatAlign.CENTER, null, null, null, 3);
+		public static const LABEL_YELLOW_CENTER:TextFormat = new TextFormat(GlobalVariables.Font, GlobalVariables.FontSize, Colors.YELLOW, null, null, null, null, null, TextFormatAlign.CENTER, null, null, null, 3);
+		
+		public static const FRESH_GREEN_LEFT:TextFormat = new TextFormat(GlobalVariables.Font,GlobalVariables.FontSize,Colors.GREEN_0X20EF4C, null, null, null, null, null, TextFormatAlign.LEFT);
+		public static const FRESH_GREEN_RIGHT:TextFormat = new TextFormat(GlobalVariables.Font,GlobalVariables.FontSize,Colors.GREEN_0X20EF4C, null, null, null, null, null, TextFormatAlign.RIGHT);
+		/**
+		 * 0XCCF0C1
+		 */		
+		public static const LABEL_CYAN_CENTER:TextFormat = new TextFormat(GlobalVariables.Font,GlobalVariables.FontSize, Colors.CYAN, null, null, null, null, null, TextFormatAlign.CENTER, null, null, null, 3);
+		public static const LABEL_CYAN_LEFT:TextFormat = new TextFormat(GlobalVariables.Font,GlobalVariables.FontSize, Colors.CYAN, null, null, null, null, null, TextFormatAlign.LEFT, null, null, null, 3);
+		public static const LABEL_CYAN_RIGHT:TextFormat = new TextFormat(GlobalVariables.Font,GlobalVariables.FontSize, Colors.CYAN, null, null, null, null, null, TextFormatAlign.RIGHT, null, null, null, 3);
+		
+		/**
+		 * 0XFF9900
+		 */		
+		public static const LABEL_BRONW_CENTER:TextFormat = new TextFormat(GlobalVariables.Font,GlobalVariables.FontSize, Colors.BROWN, null, null, null, null, null, TextFormatAlign.CENTER, null, null, null, 3);
+		public static const LABEL_GOLD_CENTER:TextFormat = new TextFormat(GlobalVariables.Font,GlobalVariables.FontSize, Colors.GOLD, null, null, null, null, null, TextFormatAlign.CENTER, null, null, null, 3);
+		
+		public static const LABEL_LIGHTGREEN:TextFormat = new TextFormat(GlobalVariables.Font,GlobalVariables.FontSize,Colors.GREEN_0X20EF4C,null,null,null,null,null,TextFormatAlign.CENTER);
+	}
+}

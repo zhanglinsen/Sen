@@ -1,0 +1,115 @@
+package project.editor.manager
+{
+    import flash.filesystem.File;
+    import flash.filesystem.FileMode;
+    import flash.filesystem.FileStream;
+    import flash.utils.Dictionary;
+
+    import mx.collections.ArrayCollection;
+
+    import uqee.lyingdragon.global.Configs;
+    import uqee.core.text.HyperText;
+    import uqee.core.text.IText;
+    import uqee.core.text.SimpleText;
+
+    public class TextManager
+    {
+        public static function LoadText( fileName:String ):void
+        {
+            LoadTextFile( new File( Configs.TextPath+fileName ));
+        }
+
+        public static function UpdateText( fileName:String, xml:XML ):void
+        {
+            ResetCache( fileName );
+            var files:Array = _FileCache[fileName];
+
+            var list:XMLList = xml.HyperText;
+
+            for ( var i:int=0; i<list.length(); i++ )
+            {
+                var hyperText:XML = list[i];
+                var htParser:HyperText = new HyperText();
+                htParser.Parse( hyperText );
+                _Cache[String( hyperText.@ident )] = htParser;
+                files.push( String( hyperText.@ident ));
+            }
+
+            list = xml.SimpleText;
+
+            for ( i=0; i<list.length(); i++ )
+            {
+                var simpleText:XML = list[i];
+                var stParser:SimpleText = new SimpleText();
+                stParser.Parse( simpleText );
+                _Cache[String( simpleText.@ident )] = stParser;
+                files.push( String( simpleText.@ident ));
+            }
+        }
+
+        private static function ResetCache( fileName:String ):void
+        {
+            if ( !_FileCache[fileName])
+            {
+                _FileCache[fileName] = [];
+            }
+            var files:Array = _FileCache[fileName];
+
+            for ( var i:int=files.length-1; i>=0; i-- )
+            {
+                //如果已加载过，清除已加载的内容
+                delete _Cache[files.pop()];
+            }
+        }
+
+        public static function LoadTextFile( file:File ):void
+        {
+            var fs:FileStream = new FileStream();
+            fs.open( file, FileMode.READ );
+            var xml:XML = new XML( fs.readUTFBytes( fs.bytesAvailable ));
+            fs.close();
+            UpdateText( file.name, xml );
+        }
+        private static var _FileCache:Dictionary = new Dictionary();
+        private static var _Cache:Dictionary = new Dictionary();
+
+        public static function GetText( ident:String ):IText
+        {
+            return _Cache[ ident ];
+        }
+
+        /**
+         * 根据ID取字符
+         */
+        public static function GetString( ident:String ):String
+        {
+            return _Cache[ident] ? _Cache[ident].toString() : "";
+        }
+
+        /**
+         * 取文件中的所有字符
+         */
+        public static function GetFileString( fileName:String ):ArrayCollection
+        {
+            var arr:ArrayCollection = new ArrayCollection();
+            var files:Array = _FileCache[fileName];
+
+            if ( files )
+            {
+                for ( var i:int=0; i<files.length; i++ )
+                {
+                    arr.addItem({ ident:files[i],label:GetString( files[ i ])});
+                }
+            }
+            return arr;
+        }
+
+        public static function Clear():void
+        {
+            for ( var key:String in _Cache )
+            {
+                delete _Cache[key];
+            }
+        }
+    }
+}

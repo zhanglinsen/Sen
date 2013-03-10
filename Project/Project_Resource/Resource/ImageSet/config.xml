@@ -1,0 +1,1921 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ImageSetList>
+	<ImageSet ident="500" name="War_en_US" type="image">
+        <Image ident="501" name="62_Disabled.png"/>
+        <Image ident="502" name="62_Down.png"/>
+        <Image ident="503" name="62_Over.png"/>
+        <Image ident="504" name="62_Up.png"/>
+        <Image ident="505" name="63_Disabled.png"/>
+        <Image ident="506" name="63_Down.png"/>
+        <Image ident="507" name="63_Over.png"/>
+        <Image ident="508" name="63_Up.png"/>
+        <Image ident="509" name="64_Disabled.png"/>
+        <Image ident="510" name="64_Down.png"/>
+        <Image ident="511" name="64_Over.png"/>
+        <Image ident="512" name="64_Up.png"/>
+        <Image ident="513" name="65_Disabled.png"/>
+        <Image ident="514" name="65_Down.png"/>
+        <Image ident="515" name="65_Over.png"/>
+        <Image ident="516" name="65_Up.png"/>
+        <Image ident="521" name="67_Disabled.png"/>
+        <Image ident="522" name="67_Down.png"/>
+        <Image ident="523" name="67_Over.png"/>
+        <Image ident="524" name="67_Up.png"/>
+    </ImageSet>
+	<ImageSet ident="500" name="War_en_sogame" type="image">
+        <Image ident="501" name="62_Disabled.png"/>
+        <Image ident="502" name="62_Down.png"/>
+        <Image ident="503" name="62_Over.png"/>
+        <Image ident="504" name="62_Up.png"/>
+        <Image ident="505" name="63_Disabled.png"/>
+        <Image ident="506" name="63_Down.png"/>
+        <Image ident="507" name="63_Over.png"/>
+        <Image ident="508" name="63_Up.png"/>
+        <Image ident="509" name="64_Disabled.png"/>
+        <Image ident="510" name="64_Down.png"/>
+        <Image ident="511" name="64_Over.png"/>
+        <Image ident="512" name="64_Up.png"/>
+        <Image ident="513" name="65_Disabled.png"/>
+        <Image ident="514" name="65_Down.png"/>
+        <Image ident="515" name="65_Over.png"/>
+        <Image ident="516" name="65_Up.png"/>
+        <Image ident="521" name="67_Disabled.png"/>
+        <Image ident="522" name="67_Down.png"/>
+        <Image ident="523" name="67_Over.png"/>
+        <Image ident="524" name="67_Up.png"/>
+    </ImageSet>
+	<ImageSet ident="500" name="War_id_ID" type="image">
+        <Image ident="501" name="62_Disabled.png"/>
+        <Image ident="502" name="62_Down.png"/>
+        <Image ident="503" name="62_Over.png"/>
+        <Image ident="504" name="62_Up.png"/>
+        <Image ident="505" name="63_Disabled.png"/>
+        <Image ident="506" name="63_Down.png"/>
+        <Image ident="507" name="63_Over.png"/>
+        <Image ident="508" name="63_Up.png"/>
+        <Image ident="509" name="64_Disabled.png"/>
+        <Image ident="510" name="64_Down.png"/>
+        <Image ident="511" name="64_Over.png"/>
+        <Image ident="512" name="64_Up.png"/>
+        <Image ident="513" name="65_Disabled.png"/>
+        <Image ident="514" name="65_Down.png"/>
+        <Image ident="515" name="65_Over.png"/>
+        <Image ident="516" name="65_Up.png"/>
+        <Image ident="521" name="67_Disabled.png"/>
+        <Image ident="522" name="67_Down.png"/>
+        <Image ident="523" name="67_Over.png"/>
+        <Image ident="524" name="67_Up.png"/>
+    </ImageSet>
+	<ImageSet ident="500" name="War_debug" type="image">
+        <Image ident="501" name="62_Disabled.png"/>
+        <Image ident="502" name="62_Down.png"/>
+        <Image ident="503" name="62_Over.png"/>
+        <Image ident="504" name="62_Up.png"/>
+        <Image ident="505" name="63_Disabled.png"/>
+        <Image ident="506" name="63_Down.png"/>
+        <Image ident="507" name="63_Over.png"/>
+        <Image ident="508" name="63_Up.png"/>
+        <Image ident="509" name="64_Disabled.png"/>
+        <Image ident="510" name="64_Down.png"/>
+        <Image ident="511" name="64_Over.png"/>
+        <Image ident="512" name="64_Up.png"/>
+        <Image ident="513" name="65_Disabled.png"/>
+        <Image ident="514" name="65_Down.png"/>
+        <Image ident="515" name="65_Over.png"/>
+        <Image ident="516" name="65_Up.png"/>
+        <Image ident="521" name="67_Disabled.png"/>
+        <Image ident="522" name="67_Down.png"/>
+        <Image ident="523" name="67_Over.png"/>
+        <Image ident="524" name="67_Up.png"/>
+    </ImageSet>
+	<ImageSet ident="500" name="War_zh_CN" type="image">
+        <Image ident="501" name="62_Disabled.png"/>
+        <Image ident="502" name="62_Down.png"/>
+        <Image ident="503" name="62_Over.png"/>
+        <Image ident="504" name="62_Up.png"/>
+        <Image ident="505" name="63_Disabled.png"/>
+        <Image ident="506" name="63_Down.png"/>
+        <Image ident="507" name="63_Over.png"/>
+        <Image ident="508" name="63_Up.png"/>
+        <Image ident="509" name="64_Disabled.png"/>
+        <Image ident="510" name="64_Down.png"/>
+        <Image ident="511" name="64_Over.png"/>
+        <Image ident="512" name="64_Up.png"/>
+        <Image ident="513" name="65_Disabled.png"/>
+        <Image ident="514" name="65_Down.png"/>
+        <Image ident="515" name="65_Over.png"/>
+        <Image ident="516" name="65_Up.png"/>
+        <Image ident="521" name="67_Disabled.png"/>
+        <Image ident="522" name="67_Down.png"/>
+        <Image ident="523" name="67_Over.png"/>
+        <Image ident="524" name="67_Up.png"/>
+    </ImageSet>
+	<ImageSet ident="500" name="War_zh_TW" type="image">
+        <Image ident="501" name="62_Disabled.png"/>
+        <Image ident="502" name="62_Down.png"/>
+        <Image ident="503" name="62_Over.png"/>
+        <Image ident="504" name="62_Up.png"/>
+        <Image ident="505" name="63_Disabled.png"/>
+        <Image ident="506" name="63_Down.png"/>
+        <Image ident="507" name="63_Over.png"/>
+        <Image ident="508" name="63_Up.png"/>
+        <Image ident="509" name="64_Disabled.png"/>
+        <Image ident="510" name="64_Down.png"/>
+        <Image ident="511" name="64_Over.png"/>
+        <Image ident="512" name="64_Up.png"/>
+        <Image ident="513" name="65_Disabled.png"/>
+        <Image ident="514" name="65_Down.png"/>
+        <Image ident="515" name="65_Over.png"/>
+        <Image ident="516" name="65_Up.png"/>
+        <Image ident="521" name="67_Disabled.png"/>
+        <Image ident="522" name="67_Down.png"/>
+        <Image ident="523" name="67_Over.png"/>
+        <Image ident="524" name="67_Up.png"/>
+    </ImageSet>
+	<ImageSet ident="500" name="War_vi_VN" type="image">
+        <Image ident="501" name="62_Disabled.png"/>
+        <Image ident="502" name="62_Down.png"/>
+        <Image ident="503" name="62_Over.png"/>
+        <Image ident="504" name="62_Up.png"/>
+        <Image ident="505" name="63_Disabled.png"/>
+        <Image ident="506" name="63_Down.png"/>
+        <Image ident="507" name="63_Over.png"/>
+        <Image ident="508" name="63_Up.png"/>
+        <Image ident="509" name="64_Disabled.png"/>
+        <Image ident="510" name="64_Down.png"/>
+        <Image ident="511" name="64_Over.png"/>
+        <Image ident="512" name="64_Up.png"/>
+        <Image ident="513" name="65_Disabled.png"/>
+        <Image ident="514" name="65_Down.png"/>
+        <Image ident="515" name="65_Over.png"/>
+        <Image ident="516" name="65_Up.png"/>
+        <Image ident="521" name="67_Disabled.png"/>
+        <Image ident="522" name="67_Down.png"/>
+        <Image ident="523" name="67_Over.png"/>
+        <Image ident="524" name="67_Up.png"/>
+    </ImageSet>
+	<ImageSet ident="500" name="War_ja_JP" type="image">
+        <Image ident="501" name="62_Disabled.png"/>
+        <Image ident="502" name="62_Down.png"/>
+        <Image ident="503" name="62_Over.png"/>
+        <Image ident="504" name="62_Up.png"/>
+        <Image ident="505" name="63_Disabled.png"/>
+        <Image ident="506" name="63_Down.png"/>
+        <Image ident="507" name="63_Over.png"/>
+        <Image ident="508" name="63_Up.png"/>
+        <Image ident="509" name="64_Disabled.png"/>
+        <Image ident="510" name="64_Down.png"/>
+        <Image ident="511" name="64_Over.png"/>
+        <Image ident="512" name="64_Up.png"/>
+        <Image ident="513" name="65_Disabled.png"/>
+        <Image ident="514" name="65_Down.png"/>
+        <Image ident="515" name="65_Over.png"/>
+        <Image ident="516" name="65_Up.png"/>
+        <Image ident="521" name="67_Disabled.png"/>
+        <Image ident="522" name="67_Down.png"/>
+        <Image ident="523" name="67_Over.png"/>
+        <Image ident="524" name="67_Up.png"/>
+    </ImageSet>
+	<ImageSet ident="500" name="War_ja_JP2" type="image">
+        <Image ident="501" name="62_Disabled.png"/>
+        <Image ident="502" name="62_Down.png"/>
+        <Image ident="503" name="62_Over.png"/>
+        <Image ident="504" name="62_Up.png"/>
+        <Image ident="505" name="63_Disabled.png"/>
+        <Image ident="506" name="63_Down.png"/>
+        <Image ident="507" name="63_Over.png"/>
+        <Image ident="508" name="63_Up.png"/>
+        <Image ident="509" name="64_Disabled.png"/>
+        <Image ident="510" name="64_Down.png"/>
+        <Image ident="511" name="64_Over.png"/>
+        <Image ident="512" name="64_Up.png"/>
+        <Image ident="513" name="65_Disabled.png"/>
+        <Image ident="514" name="65_Down.png"/>
+        <Image ident="515" name="65_Over.png"/>
+        <Image ident="516" name="65_Up.png"/>
+        <Image ident="521" name="67_Disabled.png"/>
+        <Image ident="522" name="67_Down.png"/>
+        <Image ident="523" name="67_Over.png"/>
+        <Image ident="524" name="67_Up.png"/>
+    </ImageSet>
+	<ImageSet ident="500" name="War_ko_KR" type="image">
+        <Image ident="501" name="62_Disabled.png"/>
+        <Image ident="502" name="62_Down.png"/>
+        <Image ident="503" name="62_Over.png"/>
+        <Image ident="504" name="62_Up.png"/>
+        <Image ident="505" name="63_Disabled.png"/>
+        <Image ident="506" name="63_Down.png"/>
+        <Image ident="507" name="63_Over.png"/>
+        <Image ident="508" name="63_Up.png"/>
+        <Image ident="509" name="64_Disabled.png"/>
+        <Image ident="510" name="64_Down.png"/>
+        <Image ident="511" name="64_Over.png"/>
+        <Image ident="512" name="64_Up.png"/>
+        <Image ident="513" name="65_Disabled.png"/>
+        <Image ident="514" name="65_Down.png"/>
+        <Image ident="515" name="65_Over.png"/>
+        <Image ident="516" name="65_Up.png"/>
+        <Image ident="521" name="67_Disabled.png"/>
+        <Image ident="522" name="67_Down.png"/>
+        <Image ident="523" name="67_Over.png"/>
+        <Image ident="524" name="67_Up.png"/>
+    </ImageSet>
+	<ImageSet ident="500" name="War_th_TH" type="image">
+        <Image ident="501" name="62_Disabled.png"/>
+        <Image ident="502" name="62_Down.png"/>
+        <Image ident="503" name="62_Over.png"/>
+        <Image ident="504" name="62_Up.png"/>
+        <Image ident="505" name="63_Disabled.png"/>
+        <Image ident="506" name="63_Down.png"/>
+        <Image ident="507" name="63_Over.png"/>
+        <Image ident="508" name="63_Up.png"/>
+        <Image ident="509" name="64_Disabled.png"/>
+        <Image ident="510" name="64_Down.png"/>
+        <Image ident="511" name="64_Over.png"/>
+        <Image ident="512" name="64_Up.png"/>
+        <Image ident="513" name="65_Disabled.png"/>
+        <Image ident="514" name="65_Down.png"/>
+        <Image ident="515" name="65_Over.png"/>
+        <Image ident="516" name="65_Up.png"/>
+        <Image ident="521" name="67_Disabled.png"/>
+        <Image ident="522" name="67_Down.png"/>
+        <Image ident="523" name="67_Over.png"/>
+        <Image ident="524" name="67_Up.png"/>
+    </ImageSet>
+	<ImageSet ident="1000" name="War" type="image">
+        <Image ident="1006" name="a47.png"/>
+        <Image ident="1007" name="a48.png"/>
+        <Image ident="1008" name="a49.png"/>
+        <Image ident="1009" name="d51.png"/>
+        <Image ident="1010" name="d52.png"/>
+        <Image ident="1013" name="gz_11.png"/>
+        <Image ident="1014" name="gz_21.png"/>
+        <Image ident="1015" name="gz_31.png"/>
+        <Image ident="1016" name="a55.png"/>
+        <Image ident="1017" name="c70_Down.png"/>
+        <Image ident="1018" name="c70_Over.png"/>
+        <Image ident="1019" name="c70_Up.png"/>
+        <Image ident="1020" name="c71_Over.png"/>
+        <Image ident="1021" name="c71_Up.png"/>
+    </ImageSet>
+	<ImageSet ident="2500" name="Main_vi_VN" type="image">
+        <Image ident="2501" name="d23_1.png"/>
+        <Image ident="2502" name="d23_2.png"/>
+        <Image ident="2503" name="d23_3.png"/>
+        <Image ident="2504" name="d24.jpg"/>
+        <Image ident="2505" name="d25.jpg"/>
+        <Image ident="2506" name="a38.png"/>
+        <Image ident="2507" name="d45.png"/>
+    </ImageSet>
+	<ImageSet ident="2500" name="Main_en_US" type="image">
+        <Image ident="2501" name="d23_1.png"/>
+        <Image ident="2502" name="d23_2.png"/>
+        <Image ident="2503" name="d23_3.png"/>
+        <Image ident="2504" name="d24.jpg"/>
+        <Image ident="2505" name="d25.jpg"/>
+        <Image ident="2506" name="a38.png"/>
+        <Image ident="2507" name="d45.png"/>
+    </ImageSet>
+	<ImageSet ident="2500" name="Main_en_sogame" type="image">
+        <Image ident="2501" name="d23_1.png"/>
+        <Image ident="2502" name="d23_2.png"/>
+        <Image ident="2503" name="d23_3.png"/>
+        <Image ident="2504" name="d24.jpg"/>
+        <Image ident="2505" name="d25.jpg"/>
+        <Image ident="2506" name="a38.png"/>
+        <Image ident="2507" name="d45.png"/>
+    </ImageSet>
+	<ImageSet ident="2500" name="Main_id_ID" type="image">
+        <Image ident="2501" name="d23_1.png"/>
+        <Image ident="2502" name="d23_2.png"/>
+        <Image ident="2503" name="d23_3.png"/>
+        <Image ident="2504" name="d24.jpg"/>
+        <Image ident="2505" name="d25.jpg"/>
+        <Image ident="2506" name="a38.png"/>
+        <Image ident="2507" name="d45.png"/>
+    </ImageSet>
+	<ImageSet ident="2500" name="Main_debug" type="image">
+        <Image ident="2501" name="d23_1.png"/>
+        <Image ident="2502" name="d23_2.png"/>
+        <Image ident="2503" name="d23_3.png"/>
+        <Image ident="2504" name="d24.jpg"/>
+        <Image ident="2505" name="d25.jpg"/>
+        <Image ident="2506" name="a38.png"/>
+        <Image ident="2507" name="d45.png"/>
+    </ImageSet>
+	<ImageSet ident="2500" name="Main_zh_CN" type="image">
+        <Image ident="2501" name="d23_1.png"/>
+        <Image ident="2502" name="d23_2.png"/>
+        <Image ident="2503" name="d23_3.png"/>
+        <Image ident="2504" name="d24.jpg"/>
+        <Image ident="2505" name="d25.jpg"/>
+        <Image ident="2506" name="a38.png"/>
+        <Image ident="2507" name="d45.png"/>
+    </ImageSet>
+	<ImageSet ident="2500" name="Main_zh_TW" type="image">
+        <Image ident="2501" name="d23_1.png"/>
+        <Image ident="2502" name="d23_2.png"/>
+        <Image ident="2503" name="d23_3.png"/>
+        <Image ident="2504" name="d24.jpg"/>
+        <Image ident="2505" name="d25.jpg"/>
+        <Image ident="2517" name="a38.png"/>
+        <Image ident="2518" name="d45.png"/>
+    </ImageSet>
+	<ImageSet ident="2500" name="Main_ja_JP" type="image">
+        <Image ident="2501" name="d23_1.png"/>
+        <Image ident="2502" name="d23_2.png"/>
+        <Image ident="2503" name="d23_3.png"/>
+        <Image ident="2504" name="d24.jpg"/>
+        <Image ident="2505" name="d25.jpg"/>
+        <Image ident="2517" name="a38.png"/>
+        <Image ident="2518" name="d45.png"/>
+    </ImageSet>
+	<ImageSet ident="2500" name="Main_ja_JP2" type="image">
+        <Image ident="2501" name="d23_1.png"/>
+        <Image ident="2502" name="d23_2.png"/>
+        <Image ident="2503" name="d23_3.png"/>
+        <Image ident="2504" name="d24.jpg"/>
+        <Image ident="2505" name="d25.jpg"/>
+        <Image ident="2517" name="a38.png"/>
+        <Image ident="2518" name="d45.png"/>
+    </ImageSet>
+	<ImageSet ident="2500" name="Main_ko_KR" type="image">
+        <Image ident="2501" name="d23_1.png"/>
+        <Image ident="2502" name="d23_2.png"/>
+        <Image ident="2503" name="d23_3.png"/>
+        <Image ident="2504" name="d24.jpg"/>
+        <Image ident="2505" name="d25.jpg"/>
+        <Image ident="2517" name="a38.png"/>
+        <Image ident="2518" name="d45.png"/>
+    </ImageSet>
+	<ImageSet ident="2500" name="Main_th_TH" type="image">
+        <Image ident="2501" name="d23_1.png"/>
+        <Image ident="2502" name="d23_2.png"/>
+        <Image ident="2503" name="d23_3.png"/>
+        <Image ident="2504" name="d24.jpg"/>
+        <Image ident="2505" name="d25.jpg"/>
+        <Image ident="2517" name="a38.png"/>
+        <Image ident="2518" name="d45.png"/>
+    </ImageSet>
+	<ImageSet ident="3000" name="UI" type="image">
+		<Image ident="3005" name="boxF1.jpg"/>
+		<Image ident="3018" name="d6.jpg"/>
+		<Image ident="3019" name="a11.png"/>
+		
+		
+		<Image ident="3032" name="a11_2.png"/>
+		<Image ident="3035" name="qy_a.png"/>
+		
+		
+		<Image ident="3042" name="sj02.png"/>
+		
+		<Image ident="3046" name="d31.jpg"/>
+		<Image ident="3047" name="d9_1.png"/>
+		<Image ident="3048" name="d9_2.png"/>
+	
+        
+        <Image ident="3051" name="32.png"/>
+        
+        
+        
+        <Image ident="3055" name="a31.jpg"/>
+        
+        
+        <Image ident="3059" name="d19.png"/>
+        <Image ident="3060" name="d20.png"/>
+        <Image ident="3061" name="d21.png"/>
+        <Image ident="3062" name="d22.png"/>
+        
+        
+        
+        <Image ident="3070" name="f2.png"/>
+        <Image ident="3071" name="f3_01.jpg"/>
+        <Image ident="3072" name="f3_02.jpg"/>
+        <Image ident="3073" name="f3_03.jpg"/>
+        <Image ident="3074" name="f3_04.jpg"/>
+        <Image ident="3075" name="f3_05.jpg"/>
+        <Image ident="3076" name="f3_06.jpg"/>
+        <Image ident="3077" name="f3_07.jpg"/>
+        <Image ident="3078" name="f3_08.jpg"/>
+        
+        <Image ident="3083" name="f4_02_a.png"/>
+        <Image ident="3084" name="f4_02_b.png"/>
+        <Image ident="3085" name="f4_02_Over.png"/>
+        <Image ident="3086" name="f4_02_Up.png"/>
+        <Image ident="3087" name="f4_03_01.png"/>
+        <Image ident="3091" name="f4_04_01.png"/>
+        <Image ident="3092" name="f4_04_02.png"/>
+        <Image ident="3095" name="f4_05_Down.png"/>
+        <Image ident="3096" name="f4_05_Over.png"/>
+        <Image ident="3097" name="f4_05_Up.png"/>
+        <Image ident="3098" name="f5_01_a.png"/>
+        <Image ident="3099" name="f5_01_b.jpg"/>
+        <Image ident="3101" name="fa1.jpg"/>
+        <Image ident="3102" name="fa2.jpg"/>
+        
+        
+        <Image ident="3105" name="k-01.png"/>
+        <Image ident="3106" name="k-02.png"/>
+        <Image ident="3114" name="Activity/d17_01.png"/>
+        <Image ident="3115" name="Activity/d17_02.png"/>
+        <Image ident="3116" name="Activity/d17_03.png"/>
+        <Image ident="3117" name="Activity/d17_04.png"/>
+        <Image ident="3118" name="Activity/d17_05.png"/>
+        <Image ident="3182" name="a12.png"/>
+        <Image ident="3183" name="a6-1.png"/>
+        <Image ident="3184" name="a6-2.png"/>
+        <Image ident="3185" name="a7.png"/>
+        
+        <Image ident="3187" name="d10.png"/>
+        <Image ident="3188" name="d11.png"/>
+        <Image ident="3189" name="d2-1.png"/>
+        <Image ident="3190" name="d2-2.png"/>
+        <Image ident="3191" name="d3-1.png"/>
+        <Image ident="3192" name="d3-2.png"/>
+        <Image ident="3193" name="d5-1.png"/>
+        <Image ident="3194" name="d5-2.png"/>
+        <Image ident="3195" name="d5-3.png"/>
+        <Image ident="3200" name="f6_03.png"/>
+        <Image ident="3201" name="qz.swf"/>
+        
+        
+	
+	<Image ident="3205" name="d49.png"/>
+	<Image ident="3206" name="d52.png"/>
+	<Image ident="3207" name="f1-03-1.png"/>
+        <Image ident="3208" name="d57.png"/>
+        
+        
+        <Image ident="3212" name="d58.png"/>
+        <Image ident="3213" name="d59.png"/>
+        <Image ident="3221" name="f6_a.png"/>
+        <Image ident="3222" name="f6_b.png"/>
+        <Image ident="3223" name="f6_c.png"/>
+        <Image ident="3227" name="d82.png"/>
+        <Image ident="3228" name="d83.png"/>
+        <Image ident="3229" name="d84.png"/>
+        <Image ident="3233" name="d79.png"/>
+        <Image ident="3234" name="d80.png"/>
+    <Image ident="3235" name="d92.png"/>
+    <Image ident="3238" name="d821.png"/>
+        <Image ident="3239" name="d89.png"/>
+    
+        <Image ident="3241" name="d94.png"/>
+    <Image ident="3242" name="c32_Over.png"/>
+    <Image ident="3243" name="Activity/d17_06.png"/>
+        <Image ident="3244" name="Activity/d17_07.png"/>
+    <Image ident="3245" name="a44.png"/>
+    <Image ident="3246" name="a182.png"/>
+    <Image ident="3247" name="d167.png"/>
+        <Image ident="3248" name="d168.png"/>
+        <Image ident="3249" name="d169.png"/>
+    <Image ident="3250" name="d225.png"/>
+        <Image ident="3251" name="d226.png"/>
+    </ImageSet>
+	<ImageSet ident="4000" name="Hunting" type="image">
+        <Image ident="4018" name="sl02_Over.png"/>
+        <Image ident="4019" name="sl02_Up.png"/>
+        <Image ident="4020" name="sl03.png"/>
+        <Image ident="4021" name="sl01.swf"/>
+    <Image ident="4022" name="sl10_Over.png"/>
+        <Image ident="4023" name="sl10_Up.png"/>
+        <Image ident="4024" name="sl11_Over.png"/>
+        <Image ident="4025" name="sl11_Up.png"/>
+    </ImageSet>
+	<ImageSet ident="5000" name="Patrol" type="image">
+        <Image ident="5041" name="a35.jpg"/>
+    </ImageSet>
+	<ImageSet ident="6000" name="WarTask" type="image">
+        <Image ident="6002" name="a62.swf"/>
+        <Image ident="6003" name="d71.png"/>
+        <Image ident="6004" name="d72.png"/>
+        <Image ident="6005" name="d73_01.png"/>
+        <Image ident="6006" name="d73_02.png"/>
+        <Image ident="6007" name="d74.png"/>
+        <Image ident="6008" name="d75.png"/>
+        <Image ident="6013" name="a61.swf"/>
+        <Image ident="6014" name="c72_Down.png"/>
+        <Image ident="6015" name="c72_Over.png"/>
+        <Image ident="6016" name="c72_Up.png"/>
+    </ImageSet>
+	<ImageSet ident="7000" name="Campaign" type="image">
+		<Image ident="7005" name="a19.png"/>
+		<Image ident="7006" name="a18.jpg"/>
+		<Image ident="7007" name="FBbd05.png"/>
+		<Image ident="7008" name="FBbd06.png"/>
+		<Image ident="7009" name="FBbd10.png"/>
+	    <Image ident="7010" name="CampaignIcon/FBbd01.png"/>
+        <Image ident="7011" name="CampaignIcon/FBbd02.png"/>
+        <Image ident="7012" name="CampaignIcon/FBbd03.png"/>
+        <Image ident="7013" name="CampaignIcon/FBbd04.png"/>
+        <Image ident="7014" name="CampaignIcon/FBbd07.png"/>
+        <Image ident="7015" name="CampaignIcon/FBbd08.png"/>
+        <Image ident="7016" name="CampaignIcon2/FB004_01.swf"/>
+        <Image ident="7017" name="CampaignIcon2/FB007_01.swf"/>
+        <Image ident="7018" name="CampaignIcon2/FB008_01.swf"/>
+        <Image ident="7019" name="CampaignIcon2/FB011_01.swf"/>
+        <Image ident="7020" name="CampaignIcon2/FB012_01.swf"/>
+        <Image ident="7021" name="CampaignIcon2/FB014_01.swf"/>
+        <Image ident="7022" name="CampaignIcon2/FB015_01.swf"/>
+        <Image ident="7023" name="CampaignIcon2/FB017_01.swf"/>
+        <Image ident="7024" name="CampaignIcon2/FB018_01.swf"/>
+        <Image ident="7025" name="CampaignIcon2/FB044_01.swf"/>
+        <Image ident="7026" name="CampaignIcon2/FB037_01.swf"/>
+        <Image ident="7027" name="CampaignIcon2/FB047_01.swf"/>
+        <Image ident="7028" name="CampaignIcon2/FB050_1.swf"/>
+        <Image ident="7029" name="CampaignIcon2/FB053_01.swf"/>
+        <Image ident="7030" name="a19_lite.png"/>
+        <Image ident="7031" name="HolidayIcon/BZ6004.png"/>
+        <Image ident="7032" name="HolidayIcon/BZ6005.png"/>
+        <Image ident="7033" name="HolidayIcon/FBbd01.png"/>
+        <Image ident="7034" name="HolidayIcon/FBbd02.png"/>
+        <Image ident="7035" name="HolidayIcon/FBbd03.png"/>
+        <Image ident="7036" name="HolidayIcon/FBbd04.png"/>
+   		<Image ident="7037" name="HolidayIcon/FBbd07.png"/>
+        <Image ident="7038" name="HolidayIcon/FBbd08.png"/>
+        <Image ident="7039" name="SeaIcon/FBbd09.png"/>
+        <Image ident="7040" name="SeaIcon/FBbd10.png"/>
+        <Image ident="7041" name="SeaIcon/FBbd11.png"/>
+        <Image ident="7042" name="SeaIcon/FBbd12.png"/>
+        <Image ident="7043" name="SeaIcon/FBbd13.png"/>
+        <Image ident="7044" name="SeaIcon/FBbd14.png"/>
+        <Image ident="7045" name="SeaIcon/FBbd15.png"/>
+        <Image ident="7046" name="SeaIcon/FBbd16.png"/>
+        <Image ident="7047" name="SeaIcon/FBbd17.png"/>
+        <Image ident="7048" name="SeaIcon/FBbd18.png"/>
+<Image ident="7049" name="CampaignIcon2/FB061_01.swf"/>
+    </ImageSet>
+	<ImageSet ident="9000" name="Tower" type="image">
+        <Image ident="9001" name="slt_bbst.png"/>
+        <Image ident="9002" name="slt_bossst.png"/>
+        <Image ident="9003" name="a40.jpg"/>
+        <Image ident="9004" name="a42.jpg"/>
+        <Image ident="9005" name="d40.png"/>
+        <Image ident="9006" name="d41.png"/>
+        <Image ident="9007" name="d44.png"/>
+        <Image ident="9010" name="d47.jpg"/>
+        <Image ident="9011" name="d48.jpg"/>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <Image ident="9027" name="a60.jpg"/>
+    <Image ident="9028" name="160_Down.png"/>
+        <Image ident="9029" name="160_Over.png"/>
+        <Image ident="9030" name="160_Up.png"/>
+        <Image ident="9031" name="a171.png"/>
+    <Image ident="9032" name="a195.png"/>
+    </ImageSet>
+	<ImageSet ident="8000" name="World" type="image">
+        <Image ident="8005" name="68_Over.png"/>
+        <Image ident="8006" name="68_Up.png"/>
+        <Image ident="8007" name="d53.png"/>
+        <Image ident="8008" name="d54.png"/>
+        <Image ident="8009" name="d55.png"/>
+        <Image ident="8010" name="d56.png"/>
+        <Image ident="8012" name="xzgj.jpg"/>
+        <Image ident="8013" name="a64.swf"/>
+    </ImageSet>
+	<ImageSet ident="10000" name="Activity" type="image">
+        <Image ident="10001" name="a66.jpg"/>
+        <Image ident="10002" name="a67.jpg"/>
+        <Image ident="10003" name="box.png"/>
+        <Image ident="10004" name="box_Open.png"/>
+        <Image ident="10005" name="box_Seal.png"/>
+        <Image ident="10006" name="box_Select.png"/>
+        <Image ident="10007" name="d102.png"/>
+        <Image ident="10008" name="d103.png"/>
+        <Image ident="10009" name="d95.png"/>
+        <Image ident="10010" name="d96.png"/>
+        <Image ident="10011" name="d97.png"/>
+        <Image ident="10012" name="d98.png"/>
+        <Image ident="10013" name="d99.png"/>
+    </ImageSet>
+	<ImageSet ident="12000" name="Legion" type="image">
+		<Image ident="12007" name="TH001.jpg"/>
+		<Image ident="12008" name="TH002.jpg"/>
+		<Image ident="12009" name="TH003.jpg"/>
+		<Image ident="12010" name="TH004.jpg"/>
+		<Image ident="12011" name="TH005.jpg"/>
+	</ImageSet>
+	<ImageSet ident="17500" name="Button_vi_VN" type="image">
+        <Image ident="17505" name="19_Down.png"/>
+        <Image ident="17506" name="19_Over.png"/>
+        <Image ident="17507" name="19_Up.png"/>
+        <Image ident="17508" name="20_Down.png"/>
+        <Image ident="17509" name="20_Over.png"/>
+        <Image ident="17510" name="20_Up.png"/>
+        <Image ident="17513" name="f6_04_Down.png"/>
+        <Image ident="17514" name="f6_04_Over.png"/>
+        <Image ident="17515" name="f6_04_Up.png"/>
+        <Image ident="17516" name="f701_Down.png"/>
+        <Image ident="17517" name="f701_Over.png"/>
+        <Image ident="17518" name="f701_Up.png"/>
+        <Image ident="17519" name="f7_Down.png"/>
+        <Image ident="17520" name="f7_Over.png"/>
+        <Image ident="17521" name="f7_Up.png"/>
+    </ImageSet>
+	<ImageSet ident="17500" name="Button_en_US" type="image">
+        <Image ident="17505" name="19_Down.png"/>
+        <Image ident="17506" name="19_Over.png"/>
+        <Image ident="17507" name="19_Up.png"/>
+        <Image ident="17508" name="20_Down.png"/>
+        <Image ident="17509" name="20_Over.png"/>
+        <Image ident="17510" name="20_Up.png"/>
+        <Image ident="17513" name="f6_04_Down.png"/>
+        <Image ident="17514" name="f6_04_Over.png"/>
+        <Image ident="17515" name="f6_04_Up.png"/>
+        <Image ident="17516" name="f701_Down.png"/>
+        <Image ident="17517" name="f701_Over.png"/>
+        <Image ident="17518" name="f701_Up.png"/>
+        <Image ident="17519" name="f7_Down.png"/>
+        <Image ident="17520" name="f7_Over.png"/>
+        <Image ident="17521" name="f7_Up.png"/>
+    </ImageSet>
+	<ImageSet ident="17500" name="Button_en_sogame" type="image">
+        <Image ident="17505" name="19_Down.png"/>
+        <Image ident="17506" name="19_Over.png"/>
+        <Image ident="17507" name="19_Up.png"/>
+        <Image ident="17508" name="20_Down.png"/>
+        <Image ident="17509" name="20_Over.png"/>
+        <Image ident="17510" name="20_Up.png"/>
+        <Image ident="17513" name="f6_04_Down.png"/>
+        <Image ident="17514" name="f6_04_Over.png"/>
+        <Image ident="17515" name="f6_04_Up.png"/>
+        <Image ident="17516" name="f701_Down.png"/>
+        <Image ident="17517" name="f701_Over.png"/>
+        <Image ident="17518" name="f701_Up.png"/>
+        <Image ident="17519" name="f7_Down.png"/>
+        <Image ident="17520" name="f7_Over.png"/>
+        <Image ident="17521" name="f7_Up.png"/>
+    </ImageSet>
+	<ImageSet ident="17500" name="Button_id_ID" type="image">
+        <Image ident="17505" name="19_Down.png"/>
+        <Image ident="17506" name="19_Over.png"/>
+        <Image ident="17507" name="19_Up.png"/>
+        <Image ident="17508" name="20_Down.png"/>
+        <Image ident="17509" name="20_Over.png"/>
+        <Image ident="17510" name="20_Up.png"/>
+        <Image ident="17513" name="f6_04_Down.png"/>
+        <Image ident="17514" name="f6_04_Over.png"/>
+        <Image ident="17515" name="f6_04_Up.png"/>
+        <Image ident="17516" name="f701_Down.png"/>
+        <Image ident="17517" name="f701_Over.png"/>
+        <Image ident="17518" name="f701_Up.png"/>
+        <Image ident="17519" name="f7_Down.png"/>
+        <Image ident="17520" name="f7_Over.png"/>
+        <Image ident="17521" name="f7_Up.png"/>
+    </ImageSet>
+	<ImageSet ident="17500" name="Button_debug" type="image">
+        <Image ident="17505" name="19_Down.png"/>
+        <Image ident="17506" name="19_Over.png"/>
+        <Image ident="17507" name="19_Up.png"/>
+        <Image ident="17508" name="20_Down.png"/>
+        <Image ident="17509" name="20_Over.png"/>
+        <Image ident="17510" name="20_Up.png"/>
+        <Image ident="17513" name="f6_04_Down.png"/>
+        <Image ident="17514" name="f6_04_Over.png"/>
+        <Image ident="17515" name="f6_04_Up.png"/>
+        <Image ident="17516" name="f701_Down.png"/>
+        <Image ident="17517" name="f701_Over.png"/>
+        <Image ident="17518" name="f701_Up.png"/>
+        <Image ident="17519" name="f7_Down.png"/>
+        <Image ident="17520" name="f7_Over.png"/>
+        <Image ident="17521" name="f7_Up.png"/>
+    </ImageSet>
+	<ImageSet ident="17500" name="Button_zh_CN" type="image">
+        <Image ident="17505" name="19_Down.png"/>
+        <Image ident="17506" name="19_Over.png"/>
+        <Image ident="17507" name="19_Up.png"/>
+        <Image ident="17508" name="20_Down.png"/>
+        <Image ident="17509" name="20_Over.png"/>
+        <Image ident="17510" name="20_Up.png"/>
+        <Image ident="17513" name="f6_04_Down.png"/>
+        <Image ident="17514" name="f6_04_Over.png"/>
+        <Image ident="17515" name="f6_04_Up.png"/>
+        <Image ident="17516" name="f701_Down.png"/>
+        <Image ident="17517" name="f701_Over.png"/>
+        <Image ident="17518" name="f701_Up.png"/>
+        <Image ident="17519" name="f7_Down.png"/>
+        <Image ident="17520" name="f7_Over.png"/>
+        <Image ident="17521" name="f7_Up.png"/>
+    </ImageSet>
+	<ImageSet ident="17500" name="Button_zh_TW" type="image">
+        <Image ident="17505" name="19_Down.png"/>
+        <Image ident="17506" name="19_Over.png"/>
+        <Image ident="17507" name="19_Up.png"/>
+        <Image ident="17508" name="20_Down.png"/>
+        <Image ident="17509" name="20_Over.png"/>
+        <Image ident="17510" name="20_Up.png"/>
+        <Image ident="17513" name="f6_04_Down.png"/>
+        <Image ident="17514" name="f6_04_Over.png"/>
+        <Image ident="17515" name="f6_04_Up.png"/>
+        <Image ident="17516" name="f701_Down.png"/>
+        <Image ident="17517" name="f701_Over.png"/>
+        <Image ident="17518" name="f701_Up.png"/>
+        <Image ident="17519" name="f7_Down.png"/>
+        <Image ident="17520" name="f7_Over.png"/>
+        <Image ident="17521" name="f7_Up.png"/>
+    </ImageSet>
+	<ImageSet ident="17500" name="Button_ja_JP" type="image">
+        <Image ident="17505" name="19_Down.png"/>
+        <Image ident="17506" name="19_Over.png"/>
+        <Image ident="17507" name="19_Up.png"/>
+        <Image ident="17508" name="20_Down.png"/>
+        <Image ident="17509" name="20_Over.png"/>
+        <Image ident="17510" name="20_Up.png"/>
+        <Image ident="17513" name="f6_04_Down.png"/>
+        <Image ident="17514" name="f6_04_Over.png"/>
+        <Image ident="17515" name="f6_04_Up.png"/>
+        <Image ident="17516" name="f701_Down.png"/>
+        <Image ident="17517" name="f701_Over.png"/>
+        <Image ident="17518" name="f701_Up.png"/>
+        <Image ident="17519" name="f7_Down.png"/>
+        <Image ident="17520" name="f7_Over.png"/>
+        <Image ident="17521" name="f7_Up.png"/>
+    </ImageSet>
+	<ImageSet ident="17500" name="Button_ja_JP2" type="image">
+        <Image ident="17505" name="19_Down.png"/>
+        <Image ident="17506" name="19_Over.png"/>
+        <Image ident="17507" name="19_Up.png"/>
+        <Image ident="17508" name="20_Down.png"/>
+        <Image ident="17509" name="20_Over.png"/>
+        <Image ident="17510" name="20_Up.png"/>
+        <Image ident="17513" name="f6_04_Down.png"/>
+        <Image ident="17514" name="f6_04_Over.png"/>
+        <Image ident="17515" name="f6_04_Up.png"/>
+        <Image ident="17516" name="f701_Down.png"/>
+        <Image ident="17517" name="f701_Over.png"/>
+        <Image ident="17518" name="f701_Up.png"/>
+        <Image ident="17519" name="f7_Down.png"/>
+        <Image ident="17520" name="f7_Over.png"/>
+        <Image ident="17521" name="f7_Up.png"/>
+    </ImageSet>
+	<ImageSet ident="17500" name="Button_ko_KR" type="image">
+        <Image ident="17505" name="19_Down.png"/>
+        <Image ident="17506" name="19_Over.png"/>
+        <Image ident="17507" name="19_Up.png"/>
+        <Image ident="17508" name="20_Down.png"/>
+        <Image ident="17509" name="20_Over.png"/>
+        <Image ident="17510" name="20_Up.png"/>
+        <Image ident="17513" name="f6_04_Down.png"/>
+        <Image ident="17514" name="f6_04_Over.png"/>
+        <Image ident="17515" name="f6_04_Up.png"/>
+        <Image ident="17516" name="f701_Down.png"/>
+        <Image ident="17517" name="f701_Over.png"/>
+        <Image ident="17518" name="f701_Up.png"/>
+        <Image ident="17519" name="f7_Down.png"/>
+        <Image ident="17520" name="f7_Over.png"/>
+        <Image ident="17521" name="f7_Up.png"/>
+    </ImageSet>
+	<ImageSet ident="17500" name="Button_th_TH" type="image">
+        <Image ident="17505" name="19_Down.png"/>
+        <Image ident="17506" name="19_Over.png"/>
+        <Image ident="17507" name="19_Up.png"/>
+        <Image ident="17508" name="20_Down.png"/>
+        <Image ident="17509" name="20_Over.png"/>
+        <Image ident="17510" name="20_Up.png"/>
+        <Image ident="17513" name="f6_04_Down.png"/>
+        <Image ident="17514" name="f6_04_Over.png"/>
+        <Image ident="17515" name="f6_04_Up.png"/>
+        <Image ident="17516" name="f701_Down.png"/>
+        <Image ident="17517" name="f701_Over.png"/>
+        <Image ident="17518" name="f701_Up.png"/>
+        <Image ident="17519" name="f7_Down.png"/>
+        <Image ident="17520" name="f7_Over.png"/>
+        <Image ident="17521" name="f7_Up.png"/>
+    </ImageSet>
+	<ImageSet ident="17000" name="Button" type="image">
+		<Image ident="17001" name="TabItemUp.png"/>
+		<Image ident="17002" name="TabItemOver.png"/>
+		<Image ident="17003" name="TabItemDown.png"/>
+		<Image ident="17004" name="0_Up.png"/>
+		<Image ident="17005" name="0_Over.png"/>
+		<Image ident="17006" name="0_Down.png"/>
+		<Image ident="17007" name="1_Up.png"/>
+		<Image ident="17008" name="1_Over.png"/>
+		<Image ident="17009" name="1_Down.png"/>
+		<Image ident="17010" name="1_Disabled.png"/>
+		<Image ident="17014" name="3_Up.png"/>
+		<Image ident="17015" name="3_Over.png"/>
+		<Image ident="17016" name="3_Down.png"/>
+		<Image ident="17017" name="4_Up.png"/>
+		<Image ident="17018" name="4_Over.png"/>
+		<Image ident="17019" name="4_Down.png"/>
+		<Image ident="17020" name="5_Up.png"/>
+		<Image ident="17021" name="5_Over.png"/>
+		<Image ident="17022" name="5_Down.png"/>
+		<Image ident="17023" name="6_Up.png"/>
+		<Image ident="17024" name="6_Over.png"/>
+		<Image ident="17025" name="6_Down.png"/>
+		<Image ident="17026" name="7_Up.png"/>
+		<Image ident="17027" name="7_Over.png"/>
+		<Image ident="17028" name="7_Down.png"/>
+		<Image ident="17029" name="8_Up.png"/>
+		<Image ident="17030" name="8_Over.png"/>
+		<Image ident="17031" name="8_Down.png"/>
+		<Image ident="17032" name="9_Up.png"/>
+		<Image ident="17033" name="9_Over.png"/>
+		<Image ident="17034" name="9_Down.png"/>
+		<Image ident="17035" name="10_Up.png"/>
+		<Image ident="17036" name="10_Over.png"/>
+		<Image ident="17037" name="10_Down.png"/>
+		<Image ident="17038" name="11_Up.png"/>
+		<Image ident="17039" name="11_Over.png"/>
+		<Image ident="17040" name="11_Down.png"/>
+		<Image ident="17072" name="17_Down.png"/>
+		<Image ident="17073" name="17_Over.png"/>
+		<Image ident="17074" name="17_Up.png"/>
+		<Image ident="17075" name="18_Down.png"/>
+		<Image ident="17076" name="18_Over.png"/>
+		<Image ident="17077" name="18_Up.png"/>
+		<Image ident="17078" name="14_Down..png"/>
+		<Image ident="17079" name="14_Over.png"/>
+		<Image ident="17080" name="14_Up.png"/>
+		<Image ident="17089" name="13_Disabled.jpg"/>
+		<Image ident="17090" name="13_Over.jpg"/>
+		<Image ident="17091" name="13_Up.jpg"/>
+		<Image ident="17093" name="21_Over.png"/>
+		<Image ident="17094" name="21_Up.png"/>
+		<Image ident="17096" name="22_Over.png"/>
+		<Image ident="17097" name="22_Up.png"/>
+		<Image ident="17098" name="21_Disabled.png"/>
+		<Image ident="17099" name="22_Disabled.png"/>
+		<Image ident="17100" name="23_Disabled.png"/>
+		<Image ident="17101" name="23_Donw.png"/>
+		<Image ident="17102" name="23_Over.png"/>
+		<Image ident="17103" name="23_Up.png"/>
+		<Image ident="17107" name="14_Disabled.png"/>
+		<Image ident="17108" name="15_Down.png"/>
+		<Image ident="17109" name="15_Over.png"/>
+		<Image ident="17110" name="15_Up.png"/>
+		<Image ident="17120" name="21_Down.png"/>
+		<Image ident="17121" name="24_Down.png"/>
+		<Image ident="17122" name="24_Over.png"/>
+		<Image ident="17123" name="24_Up.png"/>
+		<Image ident="17125" name="25_Over.jpg"/>
+		<Image ident="17126" name="25_Up.jpg"/>
+		<Image ident="17127" name="9_Disabled.png"/>
+		<Image ident="17128" name="22_Down.png"/>
+		<Image ident="17131" name="26_Disabled.png"/>
+		<Image ident="17132" name="26_Down.png"/>
+		<Image ident="17133" name="26_Over.png"/>
+		<Image ident="17134" name="26_Up.png"/>
+		<Image ident="17138" name="28_Down.png"/>
+		<Image ident="17139" name="28_Over.png"/>
+		<Image ident="17140" name="28_Up.png"/>
+		<Image ident="17141" name="f5_02_Down.png"/>
+		<Image ident="17142" name="f5_02_Over.png"/>
+		<Image ident="17143" name="f5_02_Up.png"/>
+		<Image ident="17144" name="f5_03_Over.png"/>
+		<Image ident="17145" name="f5_03_Up.png"/>
+		<Image ident="17148" name="f6_01_Down.png"/>
+		<Image ident="17149" name="f6_01_Over.png"/>
+		<Image ident="17150" name="f6_01_Up.png"/>
+		<Image ident="17151" name="f6_02_a_Over.png"/>
+		<Image ident="17152" name="f6_02_a_Up.png"/>
+		<Image ident="17153" name="f6_02_b_Over.png"/>
+		<Image ident="17154" name="f6_02_b_Up.png"/>
+		<Image ident="17155" name="f6_02_c_Over.png"/>
+		<Image ident="17156" name="f6_02_c_Up.png"/>
+		<Image ident="17157" name="f6_02_d_Over.png"/>
+		<Image ident="17158" name="f6_02_d_Up.png"/>
+		<Image ident="17159" name="f6_02_e_Over.png"/>
+		<Image ident="17160" name="f6_02_e_Up.png"/>
+		<Image ident="17173" name="f8_01_Down.png"/>
+		<Image ident="17174" name="f8_01_Over.png"/>
+		<Image ident="17175" name="f8_01_Up.png"/>
+		<Image ident="17176" name="13_Down.jpg"/>
+		<Image ident="17177" name="25_Down.jpg"/>
+		<Image ident="17179" name="28_Disabled.png"/>
+		<Image ident="17180" name="buy_Over.png"/>
+		<Image ident="17181" name="buy_Up.png"/>
+		<Image ident="17182" name="order_Over.png"/>
+		<Image ident="17183" name="order_Up.png"/>
+		<Image ident="17199" name="30_Over.png"/>
+		<Image ident="17200" name="30_Up.png"/>
+		<Image ident="17203" name="33_Down.png"/>
+		<Image ident="17204" name="33_Over.png"/>
+		<Image ident="17205" name="33_Up.png"/>
+		<Image ident="17206" name="34_Up.png"/>
+		<Image ident="17207" name="35_Up.png"/>
+		<Image ident="17208" name="36_Up.png"/>
+		<Image ident="17184" name="f5_04_Over.png"/>
+		<Image ident="17185" name="f5_04_Up.png"/>
+		<Image ident="17186" name="54_Over.png"/>
+		<Image ident="17187" name="54_Up.png"/>
+		<Image ident="17188" name="55_Down.png"/>
+		<Image ident="17189" name="55_Over.png"/>
+		<Image ident="17190" name="56_Over.png"/>
+		<Image ident="17191" name="56_Up.png"/>
+		<Image ident="17192" name="56_Down.png"/>
+		<Image ident="17193" name="54_Down.png"/>
+        <Image ident="17194" name="55_Up.png"/>
+        <Image ident="17195" name="58_Over.png"/>
+        <Image ident="17196" name="58_Up.png"/>
+        <Image ident="17197" name="59_Over.png"/>
+        <Image ident="17198" name="59_Up.png"/>
+        <Image ident="17199" name="60_Over.png"/>
+        <Image ident="17200" name="60_Up.png"/>
+        <Image ident="17201" name="f1-03_Over.png"/>
+        <Image ident="17202" name="f1-03_Up.png"/>
+        <Image ident="17203" name="f4_01_Down.png"/>
+        <Image ident="17204" name="f4_01_Over.png"/>
+        <Image ident="17205" name="f4_01_Up.png"/>
+        <Image ident="17206" name="f4_03_Down.png"/>
+        <Image ident="17207" name="f4_03_Over.png"/>
+        <Image ident="17208" name="f4_03_Up.png"/>
+        <Image ident="17209" name="f4_04_Over.png"/>
+        <Image ident="17210" name="f4_04_Up.png"/>
+        <Image ident="17211" name="f5_05_Over.png"/>
+        <Image ident="17212" name="f5_05_Up.png"/>
+        <Image ident="17213" name="f5_06_Over.png"/>
+        <Image ident="17214" name="f5_06_Up.png"/>
+        <Image ident="17215" name="f6_02_f_Over.png"/>
+        <Image ident="17216" name="f6_02_f_Up.png"/>
+        <Image ident="17217" name="f1_06_Over.png"/>
+        <Image ident="17218" name="f1_06_Up.png"/>
+        <Image ident="17219" name="f1_07_Over.png"/>
+        <Image ident="17220" name="f1_07_Up.png"/>
+        <Image ident="17221" name="f1_08_Over.png"/>
+        <Image ident="17222" name="f1_08_Up.png"/>
+        <Image ident="17223" name="f1_09_Over.png"/>
+        <Image ident="17224" name="f1_09_Up.png"/>
+        <Image ident="17225" name="c74_Over.png"/>
+        <Image ident="17226" name="c74_Up.png"/>
+        <Image ident="17227" name="c75_Over.png"/>
+        <Image ident="17228" name="c75_Up.png"/>
+        <Image ident="17229" name="c78_Down.png"/>
+        <Image ident="17230" name="c78_Over.png"/>
+        <Image ident="17231" name="c78_Up.png"/>
+        <Image ident="17232" name="17_lite_Down.png"/>
+        <Image ident="17233" name="17_lite_Over.png"/>
+        <Image ident="17234" name="17_lite_Up.png"/>
+        <Image ident="17235" name="15_Disabled.png"/>
+        <Image ident="17236" name="c72_Down.png"/>
+        <Image ident="17237" name="c72_Over.png"/>
+        <Image ident="17238" name="c72_Up.png"/>
+    <Image ident="17239" name="2_Down.png"/>
+        <Image ident="17240" name="2_Over.png"/>
+        <Image ident="17241" name="2_Up.png"/>
+    <Image ident="17242" name="152_Over.png"/>
+        <Image ident="17243" name="152_Up.png"/>
+    <Image ident="17244" name="156_Down.png"/>
+        <Image ident="17245" name="156_Over.png"/>
+        <Image ident="17246" name="156_Up.png"/>
+    <Image ident="17247" name="f1_10_Over.png"/>
+        <Image ident="17248" name="f1_10_Up.png"/>
+    <Image ident="17249" name="f4_05_Over.png"/>
+        <Image ident="17250" name="f4_05_Up.png"/>
+    <Image ident="17254" name="c160_Down.png"/>
+        <Image ident="17255" name="c160_Over.png"/>
+        <Image ident="17256" name="c160_Up.png"/>
+    <Image ident="17257" name="100_Down.png"/>
+        <Image ident="17258" name="100_Over.png"/>
+        <Image ident="17259" name="100_Up.png"/>
+        <Image ident="17260" name="99_Down.png"/>
+        <Image ident="17261" name="99_Over.png"/>
+        <Image ident="17262" name="99_Up.png"/>
+    <Image ident="17263" name="166_Down.png"/>
+        <Image ident="17264" name="166_Over.png"/>
+        <Image ident="17265" name="166_Up.png"/>
+    <Image ident="17266" name="167_Down.png"/>
+        <Image ident="17267" name="167_Over.png"/>
+        <Image ident="17268" name="167_Up.png"/>
+    <Image ident="17269" name="61_Down.png"/>
+        <Image ident="17270" name="61_Over.png"/>
+        <Image ident="17271" name="61_Up.png"/>
+    <Image ident="17272" name="c73_Over.png"/>
+        <Image ident="17273" name="c73_Up.png"/>
+    <Image ident="17274" name="f6_02_g_Over.png"/>
+        <Image ident="17275" name="f6_02_g_Up.png"/>
+    </ImageSet>
+	<ImageSet ident="19000" name="Battle" type="image">
+		
+		<Image ident="19017" name="d12.png"/>
+		<Image ident="19030" name="d13.png"/>
+		<Image ident="19031" name="d14.png"/>
+		<Image ident="19033" name="d15_01.png"/>
+		<Image ident="19034" name="d15_02.png"/>
+		<Image ident="19035" name="d15_03.png"/>
+		<Image ident="19036" name="d15_04.png"/>
+		<Image ident="19037" name="d15_05.png"/>
+		<Image ident="19038" name="d16_01.jpg"/>
+		<Image ident="19039" name="d16_02.jpg"/>
+		<Image ident="19041" name="tzb_01.png"/>
+		<Image ident="19042" name="tzb_02.png"/>
+		<Image ident="19043" name="a23.png"/>
+		<Image ident="19048" name="d26.png"/>
+		<Image ident="19049" name="d27.png"/>
+	<Image ident="19052" name="dtui-03.jpg"/>
+        <Image ident="19053" name="dtui-s0.png"/>
+        <Image ident="19054" name="dtui-s1.png"/>
+        <Image ident="19055" name="dtui-s2.png"/>
+        <Image ident="19056" name="dtui-s3.png"/>
+        <Image ident="19057" name="dtui-s4.png"/>
+        <Image ident="19058" name="dtui-s5.png"/>
+        <Image ident="19059" name="dtui-s6.png"/>
+        <Image ident="19060" name="dtui-s7.png"/>
+        <Image ident="19061" name="dtui-s8.png"/>
+        <Image ident="19062" name="dtui-s9.png"/>
+        <Image ident="19063" name="a20.png"/>
+    <Image ident="19064" name="tzs_01.png"/>
+        <Image ident="19065" name="tzs_02.png"/>
+    <Image ident="19066" name="d164.png"/>
+        <Image ident="19067" name="d165.png"/>
+    </ImageSet>
+	<ImageSet ident="21500" name="Military_en_US" type="image">
+        <Image ident="21501" name="d39.png"/>
+        <Image ident="21502" name="dtui-05.png"/>
+    </ImageSet>
+	<ImageSet ident="21500" name="Military_en_sogame" type="image">
+        <Image ident="21501" name="d39.png"/>
+        <Image ident="21502" name="dtui-05.png"/>
+    </ImageSet>
+	<ImageSet ident="21500" name="Military_id_ID" type="image">
+        <Image ident="21501" name="d39.png"/>
+        <Image ident="21502" name="dtui-05.png"/>
+    </ImageSet>
+	<ImageSet ident="21500" name="Military_debug" type="image">
+        <Image ident="21501" name="d39.png"/>
+        <Image ident="21502" name="dtui-05.png"/>
+    </ImageSet>
+	<ImageSet ident="21500" name="Military_zh_CN" type="image">
+        <Image ident="21501" name="d39.png"/>
+        <Image ident="21502" name="dtui-05.png"/>
+    </ImageSet>
+	<ImageSet ident="21500" name="Military_zh_TW" type="image">
+        <Image ident="21501" name="d39.png"/>
+        <Image ident="21502" name="dtui-05.png"/>
+    </ImageSet>
+	<ImageSet ident="21500" name="Military_vi_VN" type="image">
+        <Image ident="21501" name="d39.png"/>
+        <Image ident="21502" name="dtui-05.png"/>
+    </ImageSet>
+	<ImageSet ident="21500" name="Military_ja_JP" type="image">
+        <Image ident="21501" name="d39.png"/>
+        <Image ident="21502" name="dtui-05.png"/>
+    </ImageSet>
+	<ImageSet ident="21500" name="Military_ja_JP2" type="image">
+        <Image ident="21501" name="d39.png"/>
+        <Image ident="21502" name="dtui-05.png"/>
+    </ImageSet>
+	<ImageSet ident="21500" name="Military_ko_KR" type="image">
+        <Image ident="21501" name="d39.png"/>
+        <Image ident="21502" name="dtui-05.png"/>
+    </ImageSet>
+	<ImageSet ident="21500" name="Military_th_TH" type="image">
+        <Image ident="21501" name="d39.png"/>
+        <Image ident="21502" name="dtui-05.png"/>
+    </ImageSet>
+	<ImageSet ident="21000" name="Military" type="image">
+		<Image ident="21001" name="uizb01.jpg"/>
+		<Image ident="21002" name="uizb02.jpg"/>
+		<Image ident="21003" name="uizb03.jpg"/>
+		<Image ident="21004" name="uizb04.jpg"/>
+		<Image ident="21005" name="uizb05.jpg"/>
+		<Image ident="21006" name="uizb06.jpg"/>
+		<Image ident="21007" name="uizb07.jpg"/>
+		<Image ident="21009" name="d4-1.jpg"/>
+		<Image ident="21010" name="d4-2.jpg"/>
+		<Image ident="21011" name="a13.jpg"/>
+		<Image ident="21012" name="a14.jpg"/>
+		<Image ident="21014" name="a40.jpg"/>
+		<Image ident="21017" name="a41.png"/>
+	</ImageSet>
+	<ImageSet ident="22000" name="Appoint" type="image">
+		<Image ident="22009" name="a36.jpg"/>
+        <Image ident="22010" name="a37.jpg"/>
+        <Image ident="22011" name="a39.png"/>
+		<Image ident="22012" name="a43.png"/>
+        <Image ident="22013" name="a44.png"/>
+        <Image ident="22014" name="a45.png"/>
+    </ImageSet>
+	<ImageSet ident="33500" name="ChallengeCup_vi_VN" type="image">
+	<Image ident="33501" name="31.png"/>
+        <Image ident="33502" name="37.png"/>
+        <Image ident="33503" name="38.png"/>
+        <Image ident="33504" name="39.png"/>
+        <Image ident="33505" name="40.png"/>
+        <Image ident="33506" name="41.png"/>
+        <Image ident="33507" name="42.png"/>
+        <Image ident="33508" name="45.png"/>
+        <Image ident="33509" name="46.png"/>
+        <Image ident="33510" name="47.png"/>
+        <Image ident="33511" name="48.png"/>
+        <Image ident="33512" name="lts-01.png"/>
+        <Image ident="33513" name="lts-02.png"/>
+        <Image ident="33514" name="lts-03.png"/>
+        <Image ident="33515" name="lts-04.png"/>
+        <Image ident="33516" name="lts-05.png"/>
+        <Image ident="33517" name="lts-06.png"/>
+        <Image ident="33518" name="lts-13.png"/>
+        <Image ident="33519" name="lts-18.png"/>
+        <Image ident="33520" name="lts-22.png"/>
+        <Image ident="33521" name="lts3.png"/>
+    </ImageSet>
+	<ImageSet ident="33500" name="ChallengeCup_en_US" type="image">
+	<Image ident="33501" name="31.png"/>
+        <Image ident="33502" name="37.png"/>
+        <Image ident="33503" name="38.png"/>
+        <Image ident="33504" name="39.png"/>
+        <Image ident="33505" name="40.png"/>
+        <Image ident="33506" name="41.png"/>
+        <Image ident="33507" name="42.png"/>
+        <Image ident="33508" name="45.png"/>
+        <Image ident="33509" name="46.png"/>
+        <Image ident="33510" name="47.png"/>
+        <Image ident="33511" name="48.png"/>
+        <Image ident="33512" name="lts-01.png"/>
+        <Image ident="33513" name="lts-02.png"/>
+        <Image ident="33514" name="lts-03.png"/>
+        <Image ident="33515" name="lts-04.png"/>
+        <Image ident="33516" name="lts-05.png"/>
+        <Image ident="33517" name="lts-06.png"/>
+        <Image ident="33518" name="lts-13.png"/>
+        <Image ident="33519" name="lts-18.png"/>
+        <Image ident="33520" name="lts-22.png"/>
+        <Image ident="33521" name="lts3.png"/>
+    </ImageSet>
+	<ImageSet ident="33500" name="ChallengeCup_en_sogame" type="image">
+	<Image ident="33501" name="31.png"/>
+        <Image ident="33502" name="37.png"/>
+        <Image ident="33503" name="38.png"/>
+        <Image ident="33504" name="39.png"/>
+        <Image ident="33505" name="40.png"/>
+        <Image ident="33506" name="41.png"/>
+        <Image ident="33507" name="42.png"/>
+        <Image ident="33508" name="45.png"/>
+        <Image ident="33509" name="46.png"/>
+        <Image ident="33510" name="47.png"/>
+        <Image ident="33511" name="48.png"/>
+        <Image ident="33512" name="lts-01.png"/>
+        <Image ident="33513" name="lts-02.png"/>
+        <Image ident="33514" name="lts-03.png"/>
+        <Image ident="33515" name="lts-04.png"/>
+        <Image ident="33516" name="lts-05.png"/>
+        <Image ident="33517" name="lts-06.png"/>
+        <Image ident="33518" name="lts-13.png"/>
+        <Image ident="33519" name="lts-18.png"/>
+        <Image ident="33520" name="lts-22.png"/>
+        <Image ident="33521" name="lts3.png"/>
+    </ImageSet>
+	<ImageSet ident="33500" name="ChallengeCup_id_ID" type="image">
+	<Image ident="33501" name="31.png"/>
+        <Image ident="33502" name="37.png"/>
+        <Image ident="33503" name="38.png"/>
+        <Image ident="33504" name="39.png"/>
+        <Image ident="33505" name="40.png"/>
+        <Image ident="33506" name="41.png"/>
+        <Image ident="33507" name="42.png"/>
+        <Image ident="33508" name="45.png"/>
+        <Image ident="33509" name="46.png"/>
+        <Image ident="33510" name="47.png"/>
+        <Image ident="33511" name="48.png"/>
+        <Image ident="33512" name="lts-01.png"/>
+        <Image ident="33513" name="lts-02.png"/>
+        <Image ident="33514" name="lts-03.png"/>
+        <Image ident="33515" name="lts-04.png"/>
+        <Image ident="33516" name="lts-05.png"/>
+        <Image ident="33517" name="lts-06.png"/>
+        <Image ident="33518" name="lts-13.png"/>
+        <Image ident="33519" name="lts-18.png"/>
+        <Image ident="33520" name="lts-22.png"/>
+        <Image ident="33521" name="lts3.png"/>
+    </ImageSet>
+	<ImageSet ident="33500" name="ChallengeCup_zh_CN" type="image">
+	<Image ident="33501" name="31.png"/>
+        <Image ident="33502" name="37.png"/>
+        <Image ident="33503" name="38.png"/>
+        <Image ident="33504" name="39.png"/>
+        <Image ident="33505" name="40.png"/>
+        <Image ident="33506" name="41.png"/>
+        <Image ident="33507" name="42.png"/>
+        <Image ident="33508" name="45.png"/>
+        <Image ident="33509" name="46.png"/>
+        <Image ident="33510" name="47.png"/>
+        <Image ident="33511" name="48.png"/>
+        <Image ident="33512" name="lts-01.png"/>
+        <Image ident="33513" name="lts-02.png"/>
+        <Image ident="33514" name="lts-03.png"/>
+        <Image ident="33515" name="lts-04.png"/>
+        <Image ident="33516" name="lts-05.png"/>
+        <Image ident="33517" name="lts-06.png"/>
+        <Image ident="33518" name="lts-13.png"/>
+        <Image ident="33519" name="lts-18.png"/>
+        <Image ident="33520" name="lts-22.png"/>
+        <Image ident="33521" name="lts3.png"/>
+    </ImageSet>
+	<ImageSet ident="33500" name="ChallengeCup_debug" type="image">
+	<Image ident="33501" name="31.png"/>
+        <Image ident="33502" name="37.png"/>
+        <Image ident="33503" name="38.png"/>
+        <Image ident="33504" name="39.png"/>
+        <Image ident="33505" name="40.png"/>
+        <Image ident="33506" name="41.png"/>
+        <Image ident="33507" name="42.png"/>
+        <Image ident="33508" name="45.png"/>
+        <Image ident="33509" name="46.png"/>
+        <Image ident="33510" name="47.png"/>
+        <Image ident="33511" name="48.png"/>
+        <Image ident="33512" name="lts-01.png"/>
+        <Image ident="33513" name="lts-02.png"/>
+        <Image ident="33514" name="lts-03.png"/>
+        <Image ident="33515" name="lts-04.png"/>
+        <Image ident="33516" name="lts-05.png"/>
+        <Image ident="33517" name="lts-06.png"/>
+        <Image ident="33518" name="lts-13.png"/>
+        <Image ident="33519" name="lts-18.png"/>
+        <Image ident="33520" name="lts-22.png"/>
+        <Image ident="33521" name="lts3.png"/>
+    </ImageSet>
+	<ImageSet ident="33500" name="ChallengeCup_zh_TW" type="image">
+	<Image ident="33501" name="31.png"/>
+        <Image ident="33502" name="37.png"/>
+        <Image ident="33503" name="38.png"/>
+        <Image ident="33504" name="39.png"/>
+        <Image ident="33505" name="40.png"/>
+        <Image ident="33506" name="41.png"/>
+        <Image ident="33507" name="42.png"/>
+        <Image ident="33508" name="45.png"/>
+        <Image ident="33509" name="46.png"/>
+        <Image ident="33510" name="47.png"/>
+        <Image ident="33511" name="48.png"/>
+        <Image ident="33512" name="lts-01.png"/>
+        <Image ident="33513" name="lts-02.png"/>
+        <Image ident="33514" name="lts-03.png"/>
+        <Image ident="33515" name="lts-04.png"/>
+        <Image ident="33516" name="lts-05.png"/>
+        <Image ident="33517" name="lts-06.png"/>
+        <Image ident="33518" name="lts-13.png"/>
+        <Image ident="33519" name="lts-18.png"/>
+        <Image ident="33520" name="lts-22.png"/>
+        <Image ident="33521" name="lts3.png"/>
+    </ImageSet>
+	<ImageSet ident="33500" name="ChallengeCup_ja_JP" type="image">
+	<Image ident="33501" name="31.png"/>
+        <Image ident="33502" name="37.png"/>
+        <Image ident="33503" name="38.png"/>
+        <Image ident="33504" name="39.png"/>
+        <Image ident="33505" name="40.png"/>
+        <Image ident="33506" name="41.png"/>
+        <Image ident="33507" name="42.png"/>
+        <Image ident="33508" name="45.png"/>
+        <Image ident="33509" name="46.png"/>
+        <Image ident="33510" name="47.png"/>
+        <Image ident="33511" name="48.png"/>
+        <Image ident="33512" name="lts-01.png"/>
+        <Image ident="33513" name="lts-02.png"/>
+        <Image ident="33514" name="lts-03.png"/>
+        <Image ident="33515" name="lts-04.png"/>
+        <Image ident="33516" name="lts-05.png"/>
+        <Image ident="33517" name="lts-06.png"/>
+        <Image ident="33518" name="lts-13.png"/>
+        <Image ident="33519" name="lts-18.png"/>
+        <Image ident="33520" name="lts-22.png"/>
+        <Image ident="33521" name="lts3.png"/>
+    </ImageSet>
+	<ImageSet ident="33500" name="ChallengeCup_ja_JP2" type="image">
+	<Image ident="33501" name="31.png"/>
+        <Image ident="33502" name="37.png"/>
+        <Image ident="33503" name="38.png"/>
+        <Image ident="33504" name="39.png"/>
+        <Image ident="33505" name="40.png"/>
+        <Image ident="33506" name="41.png"/>
+        <Image ident="33507" name="42.png"/>
+        <Image ident="33508" name="45.png"/>
+        <Image ident="33509" name="46.png"/>
+        <Image ident="33510" name="47.png"/>
+        <Image ident="33511" name="48.png"/>
+        <Image ident="33512" name="lts-01.png"/>
+        <Image ident="33513" name="lts-02.png"/>
+        <Image ident="33514" name="lts-03.png"/>
+        <Image ident="33515" name="lts-04.png"/>
+        <Image ident="33516" name="lts-05.png"/>
+        <Image ident="33517" name="lts-06.png"/>
+        <Image ident="33518" name="lts-13.png"/>
+        <Image ident="33519" name="lts-18.png"/>
+        <Image ident="33520" name="lts-22.png"/>
+        <Image ident="33521" name="lts3.png"/>
+    </ImageSet>
+	<ImageSet ident="33500" name="ChallengeCup_ko_KR" type="image">
+	<Image ident="33501" name="31.png"/>
+        <Image ident="33502" name="37.png"/>
+        <Image ident="33503" name="38.png"/>
+        <Image ident="33504" name="39.png"/>
+        <Image ident="33505" name="40.png"/>
+        <Image ident="33506" name="41.png"/>
+        <Image ident="33507" name="42.png"/>
+        <Image ident="33508" name="45.png"/>
+        <Image ident="33509" name="46.png"/>
+        <Image ident="33510" name="47.png"/>
+        <Image ident="33511" name="48.png"/>
+        <Image ident="33512" name="lts-01.png"/>
+        <Image ident="33513" name="lts-02.png"/>
+        <Image ident="33514" name="lts-03.png"/>
+        <Image ident="33515" name="lts-04.png"/>
+        <Image ident="33516" name="lts-05.png"/>
+        <Image ident="33517" name="lts-06.png"/>
+        <Image ident="33518" name="lts-13.png"/>
+        <Image ident="33519" name="lts-18.png"/>
+        <Image ident="33520" name="lts-22.png"/>
+        <Image ident="33521" name="lts3.png"/>
+    </ImageSet>
+	<ImageSet ident="33500" name="ChallengeCup_th_TH" type="image">
+	<Image ident="33501" name="31.png"/>
+        <Image ident="33502" name="37.png"/>
+        <Image ident="33503" name="38.png"/>
+        <Image ident="33504" name="39.png"/>
+        <Image ident="33505" name="40.png"/>
+        <Image ident="33506" name="41.png"/>
+        <Image ident="33507" name="42.png"/>
+        <Image ident="33508" name="45.png"/>
+        <Image ident="33509" name="46.png"/>
+        <Image ident="33510" name="47.png"/>
+        <Image ident="33511" name="48.png"/>
+        <Image ident="33512" name="lts-01.png"/>
+        <Image ident="33513" name="lts-02.png"/>
+        <Image ident="33514" name="lts-03.png"/>
+        <Image ident="33515" name="lts-04.png"/>
+        <Image ident="33516" name="lts-05.png"/>
+        <Image ident="33517" name="lts-06.png"/>
+        <Image ident="33518" name="lts-13.png"/>
+        <Image ident="33519" name="lts-18.png"/>
+        <Image ident="33520" name="lts-22.png"/>
+        <Image ident="33521" name="lts3.png"/>
+    </ImageSet>
+	<ImageSet ident="33000" name="ChallengeCup" type="image">
+	<Image ident="33002" name="lts2.jpg"/>
+	<Image ident="33005" name="d35.png"/>
+	<Image ident="33006" name="d36.png"/>
+	<Image ident="33007" name="d37.png"/>
+	<Image ident="33008" name="lts-14.png"/>
+	<Image ident="33009" name="lts-15.png"/>
+	<Image ident="33010" name="lts-16.png"/>
+	<Image ident="33011" name="lst-19.png"/>
+	<Image ident="33012" name="lts-19.png"/>
+	<Image ident="33013" name="lts-20.png"/>
+	<Image ident="33014" name="lts-21.png"/>
+	<Image ident="33015" name="lts-17.jpg"/>
+	<Image ident="33016" name="cup.png"/>
+        <Image ident="33017" name="kingcup.png"/>
+    </ImageSet>
+	<ImageSet ident="44000" name="NationPolicy" type="image">
+		<Image ident="44001" name="a58.png"/>
+		<Image ident="44002" name="d62.png"/>
+		<Image ident="44003" name="d63.png"/>
+		<Image ident="44004" name="d64.png"/>
+		<Image ident="44005" name="d65.png"/>
+		<Image ident="44006" name="d66.png"/>
+		<Image ident="44007" name="d67.png"/>
+		<Image ident="44008" name="d68.png"/>
+        <Image ident="44009" name="a59.png"/>
+        <Image ident="44013" name="c73_Over.png"/>
+        <Image ident="44014" name="c73_Up.png"/>
+        <Image ident="44015" name="GZGK_01.swf"/>
+        <Image ident="44016" name="GZRW_01.swf"/>
+        <Image ident="44017" name="GZRW_02.swf"/>
+        <Image ident="44018" name="GZRW_03.swf"/>
+        <Image ident="44019" name="GZRW_04.swf"/>
+        <Image ident="44020" name="GZRW_05.swf"/>
+        <Image ident="44021" name="GZRW_06.swf"/>
+        <Image ident="44022" name="GZRW_07.swf"/>
+        <Image ident="44023" name="c72_Down.png"/>
+        <Image ident="44024" name="c72_Over.png"/>
+        <Image ident="44025" name="c72_Up.png"/>
+    </ImageSet>
+	<ImageSet ident="55000" name="Plunder" type="image">
+        <Image ident="55001" name="a56.png"/>
+        <Image ident="55002" name="d60.png"/>
+        <Image ident="55003" name="d61.png"/>
+        <Image ident="55004" name="a57.png"/>
+    </ImageSet>
+	<ImageSet ident="66000" name="GeneralSoul" type="image">
+        <Image ident="66001" name="wh002.png"/>
+        <Image ident="66002" name="wh003_Over.png"/>
+        <Image ident="66003" name="wh003_Up.png"/>
+        <Image ident="66004" name="d78.png"/>
+        <Image ident="66005" name="a65.swf"/>
+        <Image ident="66006" name="wh010_Over.png"/>
+        <Image ident="66007" name="wh010_Up.png"/>
+        <Image ident="66008" name="wh011_Over.png"/>
+        <Image ident="66009" name="wh011_Up.png"/>
+        <Image ident="66010" name="wh012_Over.png"/>
+        <Image ident="66011" name="wh012_Up.png"/>
+        <Image ident="66012" name="wh013_Over.png"/>
+        <Image ident="66013" name="wh013_Up.png"/>
+    </ImageSet>
+    <ImageSet ident="77000" name="HarborUI" type="image">
+    	<Image ident="77001" name="a150.png"/>
+        <Image ident="77002" name="a151.png"/>
+        <Image ident="77003" name="a152.png"/>
+    
+    
+    </ImageSet>
+    <ImageSet ident="88000" name="Dock" type="image">
+        <Image ident="88001" name="a154.png"/>
+        <Image ident="88002" name="a155.png"/>
+        <Image ident="88003" name="a158.png"/>
+        <Image ident="88004" name="d150-1.png"/>
+        <Image ident="88005" name="d150-2.png"/>
+    </ImageSet>
+    <ImageSet ident="99000" name="HarborButton" type="image">
+    
+    <Image ident="99001" name="150_Disabled.png"/>
+        <Image ident="99002" name="150_Down.png"/>
+        <Image ident="99003" name="150_Over.png"/>
+        <Image ident="99004" name="150_Up.png"/>
+    <Image ident="99005" name="TabItem2Down.png"/>
+        <Image ident="99006" name="TabItem2Over.png"/>
+        <Image ident="99007" name="TabItem2Up.png"/>
+    </ImageSet>
+    <ImageSet ident="100000" name="Smash" type="image">
+        <Image ident="100012" name="d163.png"/>
+    <Image ident="100023" name="d162x.png"/>
+    <Image ident="100024" name="d0.png"/>
+        <Image ident="100025" name="d1.png"/>
+        <Image ident="100026" name="d2.png"/>
+        <Image ident="100027" name="d3.png"/>
+        <Image ident="100028" name="d4.png"/>
+        <Image ident="100029" name="d5.png"/>
+        <Image ident="100030" name="d6.png"/>
+        <Image ident="100031" name="d7.png"/>
+        <Image ident="100032" name="d8.png"/>
+        <Image ident="100033" name="d9.png"/>
+    <Image ident="100034" name="a40.jpg"/>
+    </ImageSet>
+    <ImageSet ident="101000" name="Regent" type="image"> <Image ident="101001" name="a11.png"/>
+        <Image ident="101002" name="a172.jpg"/>
+        <Image ident="101003" name="a173.png"/>
+        <Image ident="101004" name="a174.jpg"/>
+        <Image ident="101005" name="a175.png"/>
+        <Image ident="101006" name="a176.png"/>
+        <Image ident="101007" name="a177.png"/>
+        <Image ident="101008" name="a178.png"/>
+        <Image ident="101009" name="fzdc_01.png"/>
+    </ImageSet>
+    <ImageSet ident="102000" name="Traveler" type="image">
+    
+    <Image ident="102002" name="a181.jpg"/>
+    <Image ident="102003" name="SR000.jpg"/>
+        <Image ident="102004" name="SR001.jpg"/>
+        <Image ident="102005" name="SR002.jpg"/>
+        <Image ident="102006" name="SR003.jpg"/>
+        <Image ident="102007" name="SR004.jpg"/>
+    
+    <Image ident="102008" name="a180.png"/>
+    
+    </ImageSet>
+    <ImageSet ident="103000" name="Forge" type="image">
+     <Image ident="103001" name="a172.jpg"/>
+    </ImageSet>
+     <ImageSet ident="104000" name="HighTower" type="image">
+       <Image ident="104001" name="a 171.png"/>
+        <Image ident="104002" name="a191.png"/>
+        <Image ident="104003" name="a192.png"/>
+        <Image ident="104004" name="a193.png"/>
+    <Image ident="104005" name="a18.jpg"/>
+    <Image ident="104006" name="a190.png"/>
+    </ImageSet>
+    <ImageSet ident="105000" name="CityFightPrepare" type="image">
+     
+     
+     
+     
+   	 <Image ident="105008" name="a196.png"/>
+     <Image ident="105009" name="a197.png"/>
+     
+  	  
+        <Image ident="105012" name="d215.png"/>
+        
+        <Image ident="105014" name="d217.png"/>
+    	<Image ident="105015" name="a204.png"/>
+        <Image ident="105017" name="d218.png"/>
+        <Image ident="105018" name="d219.png"/>
+        <Image ident="105019" name="d220.png"/>
+ 	   <Image ident="105020" name="a55.png"/>
+        <Image ident="105021" name="c70_Down.png"/>
+        <Image ident="105022" name="c70_Over.png"/>
+        <Image ident="105023" name="c70_Up.png"/>
+    <Image ident="105024" name="a207.png"/>
+        <Image ident="105025" name="d231.png"/>
+    
+    <Image ident="105027" name="d216.png"/>
+    <Image ident="105028" name="a300.png"/>
+        <Image ident="105029" name="a301.png"/>
+        <Image ident="105030" name="a302.png"/>
+        <Image ident="105031" name="d250.png"/>
+        <Image ident="105032" name="d251.png"/>
+        <Image ident="105033" name="d252.png"/>
+        <Image ident="105034" name="d253.png"/>
+        <Image ident="105035" name="d254.png"/>
+        <Image ident="105036" name="d255.png"/>
+    </ImageSet>
+    <ImageSet ident="106000" name="CityFightPrepare_debug" type="image">
+     
+     
+     <Image ident="106003" name="lts3.png"/>
+    
+    <Image ident="106005" name="d213.png"/>
+        <Image ident="106006" name="d214.png"/>
+        <Image ident="106007" name="d230.png"/>
+    </ImageSet>
+    <ImageSet ident="106000" name="CityFightPrepare_zh_CN" type="image">
+     
+     
+     <Image ident="106103" name="lts3.png"/>
+    
+    <Image ident="106105" name="d213.png"/>
+        <Image ident="106106" name="d214.png"/>
+        <Image ident="106107" name="d230.png"/>
+    </ImageSet>
+    <ImageSet ident="106000" name="CityFightPrepare_zh_TW" type="image">
+     
+     
+     <Image ident="106103" name="lts3.png"/>
+    
+    <Image ident="106105" name="d213.png"/>
+        <Image ident="106106" name="d214.png"/>
+        <Image ident="106107" name="d230.png"/>
+    </ImageSet>
+    <ImageSet ident="106000" name="CityFightPrepare_en_US" type="image">
+     
+     
+     <Image ident="106103" name="lts3.png"/>
+    
+    <Image ident="106105" name="d213.png"/>
+        <Image ident="106106" name="d214.png"/>
+        <Image ident="106107" name="d230.png"/>
+    </ImageSet>
+    <ImageSet ident="106000" name="CityFightPrepare_en_sogame" type="image">
+     
+     
+     <Image ident="106103" name="lts3.png"/>
+    
+    <Image ident="106105" name="d213.png"/>
+        <Image ident="106106" name="d214.png"/>
+        <Image ident="106107" name="d230.png"/>
+    </ImageSet>
+    <ImageSet ident="106000" name="CityFightPrepare_id_ID" type="image">
+     
+     
+     <Image ident="106103" name="lts3.png"/>
+    
+    <Image ident="106105" name="d213.png"/>
+        <Image ident="106106" name="d214.png"/>
+        <Image ident="106107" name="d230.png"/>
+    </ImageSet>
+    <ImageSet ident="106000" name="CityFightPrepare_ja_JP" type="image">
+     
+     
+     <Image ident="106103" name="lts3.png"/>
+    
+    <Image ident="106105" name="d213.png"/>
+        <Image ident="106106" name="d214.png"/>
+        <Image ident="106107" name="d230.png"/>
+    </ImageSet>
+    <ImageSet ident="106000" name="CityFightPrepare_ja_JP2" type="image">
+     
+     
+     <Image ident="106103" name="lts3.png"/>
+    
+    <Image ident="106105" name="d213.png"/>
+        <Image ident="106106" name="d214.png"/>
+        <Image ident="106107" name="d230.png"/>
+    </ImageSet>
+    <ImageSet ident="106000" name="CityFightPrepare_th_TH" type="image">
+     
+     
+     <Image ident="106103" name="lts3.png"/>
+    
+    <Image ident="106105" name="d213.png"/>
+        <Image ident="106106" name="d214.png"/>
+        <Image ident="106107" name="d230.png"/>
+    </ImageSet>
+    <ImageSet ident="106000" name="CityFightPrepare_vi_VN" type="image">
+     
+     
+     <Image ident="106103" name="lts3.png"/>
+    
+    <Image ident="106105" name="d213.png"/>
+        <Image ident="106106" name="d214.png"/>
+        <Image ident="106107" name="d230.png"/>
+    </ImageSet>
+    <ImageSet ident="106000" name="CityFightPrepare_ko_KR" type="image">
+     
+     
+     <Image ident="106103" name="lts3.png"/>
+    
+    <Image ident="106105" name="d213.png"/>
+        <Image ident="106106" name="d214.png"/>
+        <Image ident="106107" name="d230.png"/>
+    </ImageSet>
+     <ImageSet ident="107000" name="Confidant" type="image">
+     <Image ident="107001" name="a196.png"/>
+        <Image ident="107002" name="a197.png"/>
+        <Image ident="107003" name="a198.png"/>
+        <Image ident="107004" name="a200.png"/>
+        <Image ident="107005" name="d208.png"/>
+        <Image ident="107006" name="d209.png"/>
+        <Image ident="107007" name="d210.png"/>
+    <Image ident="107008" name="a211.png"/>
+    <Image ident="107009" name="c172_1.png"/>
+        <Image ident="107010" name="c172_2.png"/>
+    <Image ident="107011" name="a65.swf"/>
+    <Image ident="107012" name="a212-1.png"/>
+        <Image ident="107013" name="a212-2.png"/>
+    <Image ident="107014" name="d232.png"/>
+    <Image ident="107015" name="c173_1.png"/>
+        <Image ident="107016" name="c173_2.png"/>
+    <Image ident="107017" name="xtcj04.jpg"/>
+    <Image ident="107018" name="a195.png"/>
+    <Image ident="107019" name="a214.png"/>
+    <Image ident="107020" name="a218.png"/>
+        <Image ident="107021" name="d246.png"/>
+    <Image ident="107022" name="d163.png"/>
+    </ImageSet>
+     <ImageSet ident="107000" name="Confidant_debug" type="image">
+         <Image ident="107101" name="d243.png"/>
+         <Image ident="107102" name="d244.png"/>
+        <Image ident="107103" name="d245.png"/>
+    </ImageSet>
+     <ImageSet ident="107000" name="Confidant_en_US" type="image">
+         <Image ident="107101" name="d243.png"/>
+         <Image ident="107102" name="d244.png"/>
+        <Image ident="107103" name="d245.png"/>
+    </ImageSet>
+     <ImageSet ident="107000" name="Confidant_en_sogame" type="image">
+         <Image ident="107101" name="d243.png"/>
+         <Image ident="107102" name="d244.png"/>
+        <Image ident="107103" name="d245.png"/>
+    </ImageSet>
+     <ImageSet ident="107000" name="Confidant_id_ID" type="image">
+         <Image ident="107101" name="d243.png"/>
+         <Image ident="107102" name="d244.png"/>
+        <Image ident="107103" name="d245.png"/>
+    </ImageSet>
+     <ImageSet ident="107000" name="Confidant_vi_VN" type="image">
+         <Image ident="107101" name="d243.png"/>
+         <Image ident="107102" name="d244.png"/>
+        <Image ident="107103" name="d245.png"/>
+    </ImageSet>
+     <ImageSet ident="107000" name="Confidant_ja_JP" type="image">
+         <Image ident="107101" name="d243.png"/>
+         <Image ident="107102" name="d244.png"/>
+        <Image ident="107103" name="d245.png"/>
+    </ImageSet>
+     <ImageSet ident="107000" name="Confidant_ja_JP2" type="image">
+         <Image ident="107101" name="d243.png"/>
+         <Image ident="107102" name="d244.png"/>
+        <Image ident="107103" name="d245.png"/>
+    </ImageSet>
+     <ImageSet ident="107000" name="Confidant_ko_KR" type="image">
+         <Image ident="107101" name="d243.png"/>
+         <Image ident="107102" name="d244.png"/>
+        <Image ident="107103" name="d245.png"/>
+    </ImageSet>
+     <ImageSet ident="107000" name="Confidant_th_TH" type="image">
+         <Image ident="107101" name="d243.png"/>
+         <Image ident="107102" name="d244.png"/>
+        <Image ident="107103" name="d245.png"/>
+    </ImageSet>
+     <ImageSet ident="107000" name="Confidant_zh_CN" type="image">
+         <Image ident="107101" name="d243.png"/>
+         <Image ident="107102" name="d244.png"/>
+        <Image ident="107103" name="d245.png"/>
+    </ImageSet>
+     <ImageSet ident="107000" name="Confidant_zh_TW" type="image">
+         <Image ident="107101" name="d243.png"/>
+         <Image ident="107102" name="d244.png"/>
+        <Image ident="107103" name="d245.png"/>
+    </ImageSet>
+        
+     <ImageSet ident="108000" name="SpinWin" type="image">
+      
+      <Image ident="108002" name="d73_01.png"/>
+      <Image ident="108003" name="d73_02.png"/>
+ 	   <Image ident="108004" name="box.png"/>
+        <Image ident="108005" name="box_Open.png"/>
+        <Image ident="108006" name="box_Seal.png"/>
+        <Image ident="108007" name="box_Select.png"/>
+        <Image ident="108008" name="d95.png"/>
+        <Image ident="108009" name="d96.png"/>
+        <Image ident="108010" name="d97.png"/>
+        <Image ident="108011" name="d98.png"/>
+        <Image ident="108012" name="d99.png"/>
+    <Image ident="108032" name="c176_1.png"/>
+        <Image ident="108033" name="c176_2.png"/>
+        <Image ident="108034" name="c177_1.png"/>
+        <Image ident="108035" name="c177_2.png"/>
+        <Image ident="108036" name="c178_1.png"/>
+        <Image ident="108037" name="c178_2.png"/>
+        <Image ident="108038" name="c179_1.png"/>
+        <Image ident="108039" name="c179_2.png"/>
+        <Image ident="108040" name="c180_1.png"/>
+        <Image ident="108041" name="c180_2.png"/>
+        <Image ident="108042" name="c181_1.png"/>
+        <Image ident="108043" name="c181_2.png"/>
+        <Image ident="108044" name="c182_1.png"/>
+        <Image ident="108045" name="c182_2.png"/>
+        <Image ident="108046" name="c183_1.png"/>
+        <Image ident="108047" name="c183_2.png"/>
+        <Image ident="108048" name="c184_1.png"/>
+        <Image ident="108049" name="c184_2.png"/>
+        <Image ident="108050" name="c185_1.png"/>
+        <Image ident="108051" name="c185_2.png"/>
+        <Image ident="108052" name="d234.png"/>
+    
+    
+    <Image ident="108055" name="a216.png"/>
+        <Image ident="108056" name="c189_down.png"/>
+        <Image ident="108057" name="c189_over.png"/>
+        <Image ident="108058" name="c189_up.png"/>
+    <Image ident="108059" name="a215.png"/>
+    
+    <Image ident="108061" name="a303.png"/>
+    </ImageSet>
+     <ImageSet ident="108000" name="SpinWin_debug" type="image">
+        
+     
+        
+        
+    <Image ident="108034" name="d235.png"/>
+        <Image ident="108035" name="d236.png"/>
+    </ImageSet>
+     <ImageSet ident="108000" name="SpinWin_en_sogame" type="image">
+        
+     
+        
+        
+    <Image ident="108034" name="d235.png"/>
+        <Image ident="108035" name="d236.png"/>
+    </ImageSet>
+     <ImageSet ident="108000" name="SpinWin_en_US" type="image">
+        
+     
+        
+        
+    <Image ident="108034" name="d235.png"/>
+        <Image ident="108035" name="d236.png"/>
+    </ImageSet>
+     <ImageSet ident="108000" name="SpinWin_id_ID" type="image">
+        
+     
+        
+        
+    <Image ident="108034" name="d235.png"/>
+        <Image ident="108035" name="d236.png"/>
+    </ImageSet>
+     <ImageSet ident="108000" name="SpinWin_ja_JP" type="image">
+        
+     
+        
+        
+    <Image ident="108034" name="d235.png"/>
+        <Image ident="108035" name="d236.png"/>
+    </ImageSet>
+     <ImageSet ident="108000" name="SpinWin_ja_JP2" type="image">
+        
+     
+        
+        
+    <Image ident="108034" name="d235.png"/>
+        <Image ident="108035" name="d236.png"/>
+    </ImageSet>
+     <ImageSet ident="108000" name="SpinWin_ko_KR" type="image">
+        
+     
+        
+        
+    <Image ident="108034" name="d235.png"/>
+        <Image ident="108035" name="d236.png"/>
+    </ImageSet>
+     <ImageSet ident="108000" name="SpinWin_th_TH" type="image">
+        
+     
+        
+        
+    <Image ident="108034" name="d235.png"/>
+        <Image ident="108035" name="d236.png"/>
+    </ImageSet>
+     <ImageSet ident="108000" name="SpinWin_vi_VN" type="image">
+        
+     
+        
+        
+    <Image ident="108034" name="d235.png"/>
+        <Image ident="108035" name="d236.png"/>
+    </ImageSet>
+     <ImageSet ident="108000" name="SpinWin_zh_CN" type="image">
+        
+     
+        
+        
+    <Image ident="108034" name="d235.png"/>
+        <Image ident="108035" name="d236.png"/>
+    </ImageSet>
+     <ImageSet ident="108000" name="SpinWin_zh_TW" type="image">
+        
+     
+        
+        
+    <Image ident="108034" name="d235.png"/>
+        <Image ident="108035" name="d236.png"/>
+    </ImageSet>
+     <ImageSet ident="109000" name="CityFight_debug" type="image">
+        <Image ident="109001" name="d238.png"/>
+        <Image ident="109002" name="d239.png"/>
+        <Image ident="109003" name="d241.png"/>
+        <Image ident="109004" name="d242.png"/>
+    </ImageSet>
+     <ImageSet ident="109000" name="CityFight_en_sogame" type="image">
+        <Image ident="109001" name="d238.png"/>
+        <Image ident="109002" name="d239.png"/>
+        <Image ident="109003" name="d241.png"/>
+        <Image ident="109004" name="d242.png"/>
+    </ImageSet>
+     <ImageSet ident="109000" name="CityFight_en_US" type="image">
+        <Image ident="109001" name="d238.png"/>
+        <Image ident="109002" name="d239.png"/>
+        <Image ident="109003" name="d241.png"/>
+        <Image ident="109004" name="d242.png"/>
+    </ImageSet>
+     <ImageSet ident="109000" name="CityFight_id_ID" type="image">
+        <Image ident="109001" name="d238.png"/>
+        <Image ident="109002" name="d239.png"/>
+        <Image ident="109003" name="d241.png"/>
+        <Image ident="109004" name="d242.png"/>
+    </ImageSet>
+     <ImageSet ident="109000" name="CityFight_ja_JP" type="image">
+        <Image ident="109001" name="d238.png"/>
+        
+        <Image ident="109003" name="d241.png"/>
+        <Image ident="109004" name="d242.png"/>
+    <Image ident="109005" name="d239.png"/>
+    </ImageSet>
+     <ImageSet ident="109000" name="CityFight_ja_JP2" type="image">
+        <Image ident="109001" name="d238.png"/>
+        <Image ident="109002" name="d239.png"/>
+        <Image ident="109003" name="d241.png"/>
+        <Image ident="109004" name="d242.png"/>
+    </ImageSet>
+     <ImageSet ident="109000" name="CityFight_ko_KR" type="image">
+        <Image ident="109001" name="d238.png"/>
+        <Image ident="109002" name="d239.png"/>
+        <Image ident="109003" name="d241.png"/>
+        <Image ident="109004" name="d242.png"/>
+    </ImageSet>
+     <ImageSet ident="109000" name="CityFight_th_TH" type="image">
+        <Image ident="109001" name="d238.png"/>
+        <Image ident="109002" name="d239.png"/>
+        <Image ident="109003" name="d241.png"/>
+        <Image ident="109004" name="d242.png"/>
+    </ImageSet>
+     <ImageSet ident="109000" name="CityFight_vi_VN" type="image">
+        <Image ident="109001" name="d238.png"/>
+        <Image ident="109002" name="d239.png"/>
+        <Image ident="109003" name="d241.png"/>
+        <Image ident="109004" name="d242.png"/>
+    </ImageSet>
+     <ImageSet ident="109000" name="CityFight_zh_CN" type="image">
+        <Image ident="109001" name="d238.png"/>
+        <Image ident="109002" name="d239.png"/>
+        <Image ident="109003" name="d241.png"/>
+        <Image ident="109004" name="d242.png"/>
+    </ImageSet>
+     <ImageSet ident="109000" name="CityFight_zh_TW" type="image">
+        <Image ident="109001" name="d238.png"/>
+        <Image ident="109002" name="d239.png"/>
+        <Image ident="109003" name="d241.png"/>
+        <Image ident="109004" name="d242.png"/>
+    </ImageSet>
+     <ImageSet ident="109100" name="Number" type="image">
+        <Image ident="109101" name="d237_01.png"/>
+        <Image ident="109102" name="d237_02.png"/>
+        <Image ident="109103" name="d237_03.png"/>
+        <Image ident="109104" name="d237_04.png"/>
+        <Image ident="109105" name="d237_05.png"/>
+        <Image ident="109106" name="d237_06.png"/>
+        <Image ident="109107" name="d237_07.png"/>
+        <Image ident="109108" name="d237_08.png"/>
+        <Image ident="109109" name="d237_09.png"/>
+        <Image ident="109110" name="d237_10.png"/>
+        <Image ident="109111" name="d237_11.png"/>
+        <Image ident="109112" name="d240_01.png"/>
+        <Image ident="109113" name="d240_02.png"/>
+        <Image ident="109114" name="d240_03.png"/>
+        <Image ident="109115" name="d240_04.png"/>
+        <Image ident="109116" name="d240_05.png"/>
+        <Image ident="109117" name="d240_06.png"/>
+        <Image ident="109118" name="d240_07.png"/>
+        <Image ident="109119" name="d240_08.png"/>
+        <Image ident="109120" name="d240_09.png"/>
+        <Image ident="109121" name="d240_10.png"/>
+    </ImageSet>
+</ImageSetList>

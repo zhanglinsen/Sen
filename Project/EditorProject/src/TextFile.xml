@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Files>
+	<File name="活动">ActivityText.xml</File>
+	<File name="地区场景">AreaText.xml</File>
+	<File name="战斗场景">BattleText.xml</File>
+	<File name="副本">CampaignText.xml</File>
+	<File name="策略府">CasernText.xml</File>
+	<File name="主城场景">CastleText.xml</File>
+	<File name="擂台赛">ChallengeCupText.xml</File>
+	<File name="聊天">ChatText.xml</File>
+	<File name="公用">CommonText.xml</File>
+	<File name="经济系统">EconomyText.xml</File>
+	<File name="武魂">GeneralSoulText.xml</File>
+	<File name="新手指引">GuideText.xml</File>
+	<File name="帮助文档">HelpText.xml</File>
+	<File name="狩猎">HuntText.xml</File>
+	<File name="军团">LegionText.xml</File>
+	<File name="邮件">MailText.xml</File>
+	<File name="主界面">MainText.xml</File>
+	<File name="武将">MilitaryText.xml</File>
+	<File name="团战组队">MultiBattleText.xml</File>
+	<File name="神秘商人">MysText.xml</File>
+	<File name="国政">NationText.xml</File>
+	<File name="巡查">PatrolText.xml</File>
+	<File name="充值">PayText.xml</File>
+	<File name="资源场景">ResourceText.xml</File>
+	<File name="商店">ShopText.xml</File>
+	<File name="目标内容">TargetText.xml</File>
+	<File name="任务">TaskText.xml</File>
+	<File name="试炼塔">TowerText.xml</File>
+	<File name="国战任务">WarTaskText.xml</File>
+	<File name="国战">WarText.xml</File>
+	<File name="世界场景">WorldText.xml</File>
+</Files>

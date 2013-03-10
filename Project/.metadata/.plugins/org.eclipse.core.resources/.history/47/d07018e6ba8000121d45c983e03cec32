@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+	<menuitem label="文件" data="">
+		<menuitem label="地图" data="">
+<!-- 			<menuitem label="主城" data="Castle" /> -->
+<!-- 			<menuitem label="地区" data="Area" /> -->
+<!-- 			<menuitem label="世界" data="World" /> -->
+<!-- 			<menuitem label="资源" data="Resource" /> -->
+<!-- 			<menuitem type="separator" data="" /> -->
+<!-- 			<menuitem label="副本" data="Campaign" /> -->
+<!-- 			<menuitem label="海战副本" data="SeaCampaign" /> -->
+<!-- 			<menuitem label="活动副本" data="HolidayCampaign" /> -->
+<!-- 			<menuitem label="试炼塔" data="Tower" /> -->
+<!-- 			<menuitem label="星象" data="Star" /> -->
+<!-- 			<menuitem type="separator" data="" /> -->
+<!-- 			<menuitem label="国战小地图" data="War" /> -->
+<!-- 			<menuitem label="国战世界地图" data="WarWorld" /> -->
+<!-- 			<menuitem type="separator" data="" /> -->
+<!-- 			<menuitem label="海航贸易图" data="SeaPortMap" /> -->
+		</menuitem>
+		<menuitem label="城池争夺战" data="">
+<!-- 			<menuitem label="城池地图(10vs10)" data="CityFight" /> -->
+<!-- 			<menuitem label="城池地图(5vs5)" data="CityFight2" /> -->
+<!-- 			<menuitem label="争夺战装备" data="CityFightItem" /> -->
+<!-- 			<menuitem label="争夺战兵种" data="CityFightSoldier" /> -->
+<!-- 			<menuitem label="积分兑换" data="CityFightExchange" /> -->
+		</menuitem>
+		<menuitem label="武将相关" data="">
+<!-- 			<menuitem label="武将" data="General" /> -->
+<!-- 			<menuitem label="武将卡片" data="GeneralCard" /> -->
+<!-- 			<menuitem label="阵形" data="Formation" /> -->
+<!-- 			<menuitem label="技能" data="Skill" /> -->
+<!-- 			<menuitem type="separator" data="" /> -->
+<!-- 			<menuitem label="兵种" data="Soldier" /> -->
+<!-- 			<menuitem label="水军" data="Ship" /> -->
+<!-- 			<menuitem label="兵种转修规则" data="NextSoldier" /> -->
+<!-- 			<menuitem label="红颜知己" data="Women"/> -->
+<!-- 			<menuitem label="老婆属性加成" data="WifeEffect"/> -->
+<!-- 			<menuitem label="等级设定" data="WomanLevel"/> -->
+<!-- 			<menuitem label="名品" data="Famous"/> -->
+<!-- 			<menuitem label="对话" data="WomenTalk"/> -->
+		</menuitem>
+		<menuitem label="阿斗系统" data="">
+			<menuitem label="喜好" data="Hobby"/>
+			<menuitem label="训练配置" data="ChildTrainSeries"/>
+			<menuitem label="技能配置" data="ChildSkill"/>
+		</menuitem>
+		<menuitem label="巡查系统" data="">
+<!-- 			<menuitem label="配置" data="PatrolCfg" /> -->
+<!-- 			<menuitem label="地区" data="PatrolArea" /> -->
+<!-- 			<menuitem label="位置" data="PatrolLocation" /> -->
+<!-- 			<menuitem label="人物" data="PatrolPerson" /> -->
+<!-- 			<menuitem label="移动NPC" data="PatrolMan" /> -->
+		</menuitem>
+		<menuitem label="装备相关" data="">
+<!-- 			<menuitem label="武器" data="Item" /> -->
+<!-- 			<menuitem label="重铸概率" data="Recast" /> -->
+<!-- 			<menuitem label="兵器合成" data="Composite" /> -->
+<!-- 			<menuitem label="强化" data="Intensify" /> -->
+<!-- 			<menuitem label="委派" data="Appoint" /> -->
+<!-- 			<menuitem label="勋章" data="Medal" /> -->
+<!-- 			<menuitem label="武魂" data="GeneralSoul" /> -->
+<!-- 			<menuitem label="材料" data="Material"/> -->
+<!-- 			<menuitem label="刻印" data="Etcheds"/> -->
+<!-- 			<menuitem label="铸造" data="ItemCast"/> -->
+		</menuitem>
+		<menuitem label="打猎系统" data="">
+			<menuitem label="动物" data="Hunting" />
+			<menuitem label="路径" data="Layers" />
+		</menuitem>
+		<menuitem label="活动系统" data="">
+			<menuitem label="活动" data="Activity" />
+			<menuitem label="在线奖励" data="OnlineReward" />
+			<menuitem label="活跃度" data="Liveness" />
+		</menuitem>
+		<menuitem type="separator" data="" />
+		<menuitem label="幸运大转盘" data="SpinWin" />
+		<menuitem type="separator" data="" />
+		<menuitem label="陶罐" data="Jug" />
+		<menuitem label="任务" data="Task" />
+		<menuitem label="国战任务" data="WarTask" />
+		<menuitem label="武魁系统" data="KingTower"/>
+		<menuitem type="separator" data="" />
+		<menuitem label="内政" data="Affairs" />
+		<menuitem label="官职" data="Prestige" />
+		<menuitem label="国家官职" data="NationPosition" />
+		<menuitem type="separator" data="" />
+		<menuitem label="科技" data="Tech" />
+		<menuitem label="征收事件" data="LevyEvent" />
+		<menuitem label="酒馆NPC" data="NpcDialog" />
+		<menuitem label="生产" data="Product" />
+		<menuitem label="海港商品" data="SeaTrade" />
+		<menuitem type="separator" data="" />
+		<menuitem label="动态文本" data="TextEdit" />
+		<menuitem label="类型" data="Types" />
+		<menuitem label="等级开放" data="LvLimit" />
+		<menuitem label="VIP配置" data="VipCfg" />
+		<menuitem type="separator" data="" />
+		<menuitem label="新手指导" data="Guide" />
+		<menuitem label="帮助文档" data="Help" />
+	</menuitem>
+	<menuitem label="编辑">
+		<menuitem label="重新加载" enabled="false" data="reload" />
+		<menuitem type="separator" data="" />
+		<menuitem label="保存" enabled="false" data="save" />
+		<menuitem type="separator" data="" />
+		<menuitem label="导出" enabled="false" data="export" />
+		<menuitem label="导入" enabled="false" data="import" />
+		<menuitem type="separator" data="" />
+		<menuitem label="更改资源目录" enabled="true" data="initres" />
+	</menuitem>
+	<menuitem label="切换语言">
+		<menuitem label="本地" data="switchLang" lang="debug" type="radio"
+			group="lng" toggled="true" />
+		<menuitem label="简体中文" data="switchLang" lang="zh_CN" type="radio"
+			group="lng" />
+		<menuitem label="繁体中文" data="switchLang" lang="zh_TW" type="radio"
+			group="lng" />
+		<menuitem label="英文" data="switchLang" lang="en_US" type="radio"
+			group="lng" />
+		<menuitem label="英文sogame" data="switchLang" lang="en_sogame" type="radio"
+			group="lng" />
+		<menuitem label="越南文" data="switchLang" lang="vi_VN" type="radio"
+			group="lng" />
+		<menuitem label="泰文" data="switchLang" lang="th_TH" type="radio"
+			group="lng" />
+		<menuitem label="日本ujj" data="switchLang" lang="ja_JP" type="radio"
+			group="lng" />
+		<menuitem label="日本Yahoo" data="switchLang" lang="ja_JP2" type="radio"
+			group="lng" />
+		<menuitem label="印尼" data="switchLang" lang="id_ID" type="radio"
+			group="lng" />
+		<menuitem label="韩文" data="switchLang" lang="ko_KR" type="radio"
+			group="lng" />
+		<menuitem type="separator" data="" />
+		<menuitem label="翻译" data="Trans" />
+	</menuitem>
+</menu>
